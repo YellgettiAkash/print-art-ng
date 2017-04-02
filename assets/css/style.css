@@ -127,11 +127,10 @@ hr {
 .btn-primary {
     color: #fff;
     background-color: #ff5e25;
-    border-color: #204d74;
+    /*border-color: #204d74;*/
 }
-
 .btn-primary:hover {
     color: #fff;
     background-color: #ff5e25;
-    border-color: #204d74;
+    /*border-color: #204d74;*/
 }
