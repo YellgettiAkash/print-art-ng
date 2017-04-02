@@ -24,21 +24,39 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <ul class="nav nav-pills nav-pills-header">
-                                    <li ng-repeat="tab in tabs"  ng-class="{'active' : tab.active == true }"  ng-click="selectAttribute(tab)"><a >{{tab.name}}</a></li>
+                                    <li ng-repeat="tab in tabs"  ng-class="{'active' : tab.active == true }"   data-toggle="tab" data-target="#{{tab.id}}"  ng-click="selectTab(tab)"><a >{{tab.name}}</a></li>
                                 </ul>
                             </div>
                             <div class="col-sm-12">
+                                <div  >
+                                    <div ng-if="_step == 'frame'">
+                                        <h3>{{_step}}</h3>
+                                        <hr>
+                                        <img ng-src="{{cat.id}}" ng-repeat="cat in categories"  class="img-responsive img-custom-frame">
+                                    </div>
+                                    <div ng-if="_step == 'print_size' || _step == 'print_type'">
+                                        <h3>{{_step}}</h3>
+                                        <hr>
+                                        <ul class="nav nav-pills nav-pills-children">
+                                            <li class="" ng-repeat="cat in categories" ng-class="{'active' : cat.active == true }"><a  data-toggle="tab" data-target="#{{cat.id}}" ng-click="selectAttribute(t,cat)"> {{cat.name}}</a></li>
+                                        </ul>
+                                    </div>
+                                    <div ng-if="_step == 'mat' || _step == 'mdf_color'" >
+                                            <h3>{{_step}}</h3>
+                                        <hr>
+                                                <div ng-repeat="cat in categories" class="img-custom-frame {{cat.id}}"></div>
+                                            </div>
+
+                                </div>
+                            </div>
+                            <div class="col-sm-12 top-margins">
                                 <div class="stepwizard">
                                     <div class="stepwizard-row" >
                                         <div class="stepwizard-step" ng-repeat="step in steps track by $index">
-                                            <button type="button" class="btn btn-default btn-circle"  data-toggle="tooltip" data-placement="bottom" title="A large tooltip.">{{ $index+1 }}</button>
-                                            
+                                            <button type="button" class="btn btn-default btn-circle"  ng-click="selectAttribute(step)">{{ $index+1 }}</button>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-12">
-                                
                             </div>
                         </div>
                     </div>
@@ -47,10 +65,7 @@
         </div>
     </div>
         <script type="text/javascript">
-$(document).ready(function(){
-    alert('hi');
-    
-});
+
 
         var art = angular.module('myArt',[]);
         art.controller("printArtCtrl",function ($scope,$http) {
@@ -61,12 +76,34 @@ $(document).ready(function(){
                 $scope.tabs = data.data;
             });
             $('[data-toggle="tooltip"]').tooltip();   
-            $scope.category  = false;
             $scope.categories  = [];
-            $scope.selectAttribute = function(tab) {
-                console.log(tab);
+            $scope._step  = '';
+            $scope.selectTab = function(tab) {
+                $scope.categories  = [];
+                $scope._step  = '';
                 $scope.steps = tab.steps;
             }
+
+            $scope.selectAttribute = function(step) {
+                $scope.categories  = [];
+                $scope._step  = '';
+                console.log(step);
+                var req = $http.get('index-3.php');
+                req.then(function(data){
+                    var res = data.data;
+                    angular.forEach(res,function(val,key){
+                        if(key == step){
+                            $scope._step = key;        
+                            $scope.categories = val;        
+                        }
+                    })
+                    // console.log(data.data.print_size);
+                    // $scope.categories = data
+                    // $scope.tabs = data.data;
+                });
+            }
+
+
         })
         </script>
     </body>

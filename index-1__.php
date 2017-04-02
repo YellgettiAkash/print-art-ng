@@ -30,9 +30,7 @@
                                     <h3>{{t.name}}</h3>
                                     <hr>
                                     <ul class="nav nav-pills nav-pills-children">
-                                        <li class="" ng-repeat="attr in t.attributes" ng-class="{'active' : attr.active == true }"><a  data-toggle="tab" data-target="#{{attr.id}}" ng-click="selectAttribute(t,attr)"> {{attr.name}}</a>
-
-                                        </li>
+                                        <li class="" ng-repeat="attr in t.attributes" ng-class="{'active' : attr.active == true }"><a  data-toggle="tab" data-target="#{{attr.id}}" ng-click="selectAttribute(t,attr)"> {{attr.name}}</a></li>
                                     </ul>
                                     <div ng-show="t.category" ng-repeat="cat in t.categories">
                                         <div ng-repeat="subcat in cat.subcategory">

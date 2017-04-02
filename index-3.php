@@ -50,7 +50,7 @@ $types_of_print = [
   ]
 ],
 
-"mdf-frame" => [
+"frame" => [
      [
         'id' => 'assets/images/corner/corner_1.png',
         'name' => 'frame1',
@@ -131,6 +131,70 @@ $types_of_print = [
         'name' => 'frame3',
         'price' => 10,
 		]
+],
+   'mdf_color' => [
+    
+      [
+        'id' => 'grey',
+        'name' => 'frame1',
+        'price' => 10,
+      ],
+      [
+        'id' => 'red',
+        'name' => 'frame2',
+        'price' => 15,
+      ],
+      [
+        'id' => 'blue',
+        'name' => 'frame3',
+        'price' => 10,
+    ]
+],
+
+    'mat' => [
+    
+      [
+        'id' => 'grey',
+        'name' => 'frame1',
+        'price' => 10,
+      ],
+      [
+        'id' => 'red',
+        'name' => 'frame2',
+        'price' => 15,
+      ],
+      [
+        'id' => 'blue',
+        'name' => 'frame3',
+        'price' => 10,
+    ]
+],
+
+'print_type' => [    
+      [
+        'id' => 'glossy',
+        'name' => 'Glossy',
+        'price' => 10,
+        'active' => true
+      ],
+      [
+        'id' => 'matte',
+        'name' => 'Matte',
+        'price' => 15,
+      ],
+      [
+        'id' => 'matte',
+        'name' => 'Matte-HQ',
+        'price' => 10,
+    ]
+],
+'canvas_type' => [    
+      [
+        'id' => 'high_quality_canvas',
+        'name' => 'High Quality Canvas',
+        'price' => 10,
+        'active' => true
+      ]
 ]
  
 
@@ -139,4 +203,7 @@ $types_of_print = [
 ]
 ;
 
-echo "<pre>".print_r($types_of_print,true);
+// echo "<pre>".print_r($types_of_print,true);
+
+echo  json_encode($types_of_print);
+// echo "<pre>".print_r($types_of_print,true);

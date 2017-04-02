@@ -9,7 +9,7 @@ $types_of_print = [
 	"mdf_photo" => [
 		"id" => "mdf_photo",
 		"name" => "MDF Photo",
-		"steps" => ["print_size","mdf-color"]
+		"steps" => ["print_size","mdf_color"]
 	],
 	"canvas_photo" => [
 		"id" => "canvas_photo",
