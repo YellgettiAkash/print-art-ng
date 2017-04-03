@@ -54,6 +54,7 @@
                                     <div class="stepwizard-row" >
                                         <div class="stepwizard-step" ng-repeat="step in steps track by $index">
                                             <button type="button" class="btn  btn-circle" ng-class="{'btn-primary' : step == _step,'btn-default' : step != _step }"  ng-click="selectAttribute(step)">{{ $index+1 }}</button>
+                                            <p>{{ step }}</p>
                                         </div>
                                     </div>
                                 </div>
