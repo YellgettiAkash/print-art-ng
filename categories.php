@@ -23,10 +23,10 @@ $photo_photo_steps =[
     ], ],
     ["id" => "print_size", "name" => "Print Size", "category" => [
         ["id" => "information", "name" => "information",  "categories" => [
-            ['name' => '5"x3.7"', 'id' => '5-7', 'price' => 0, 'active' => true, ],
-            ['name' => '7"x5.2"', 'id' => '7-2', 'price' => 0, ],
-            ['name' => '9"x6.7"', 'id' => '9-7', 'price' => 0, ],
-            ['name' => '11"x8.2"', 'id' => '11-8.2"', 'price' => 0, ],
+            ['name' => '5"x3.7"', 'id' => '5-7', 'height' => 5,'width' => 3.7,  'price' => 0,  'active' => true, ],
+            ['name' => '7"x5.2"', 'id' => '7-2', 'height' => 7,'width' => 5.2,'price' => 0, ],
+            ['name' => '9"x6.7"', 'id' => '9-7', 'height' => 9,'width' => 6.7,'price' => 0, ],
+            ['name' => '11"x8.2"', 'id' => '11-8.2"', 'height' => 11,'width' => 8.2, 'price' => 0, ],
         ]],
     ], ],
     ["id" => "mat", "name" => "Mat", "category" => [

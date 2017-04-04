@@ -34,6 +34,6 @@ $types_of_print = [
 	],
 
 ];
-header("content-type : application/json");
+// header("content-type : application/json");
 echo  json_encode($types_of_print);
 // echo "<pre>".print_r($types_of_print,true);

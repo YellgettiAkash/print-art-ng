@@ -8,7 +8,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+  <script src="app.js"></script>
   <style type="text/css">
     .btn-space{
        margin-right: 10px;
@@ -21,7 +21,10 @@
    <div class="row">
       <div class="col-sm-12" >
          <div class="panel panel-default">
-            <div class="panel-heading"> Print Art </div>
+            <div class="panel-heading"> Print Art  
+              <button class="btn btn-warning">Product Price :-   {{ product_price }}</button>
+              <button class="btn btn-warning">Paper Price :-   {{ paper_cost }}</button>
+            </div>
             <div class="panel-body">
                <div class="col-sm-12" >
                   <button class="btn  btn-space "  
@@ -47,7 +50,7 @@
                            <div class="panel panel-default">
                               <div class="panel-heading">{{step.name}}</div>
                               <div class="panel-body">
-                                 <div class="col-sm-12" >
+                                 <div class="col-sm-12" ng-hide="_oneCategory" >
                                     <button class="btn   btn-space"  
                                        ng-class="{'btn-primary' : cate.id == _category,'btn-default' : cate.id != _category }"
                                        ng-repeat="(key, cate) in step.category" 
@@ -87,106 +90,6 @@
    </div>
 </body>
 </body>
-<script>
-var app = angular.module("myApp", []);
-app.controller('home',function($scope,$http) {
-    alert('hi');
-    $scope.panel ='';
-    $scope.step_panel = '';
-    $scope.tabs = [];
-    $scope.steps = [];
-    $scope.category = [];
-    $scope.options = [];
-
-    $scope.process = [];
-    $scope.process_steps = [];
-
-    var req = $http.get('steps.php') ;
-    req.then(function (data) {
-        var res = data.data;
-        $scope.tabs = res;
-    });
-
-    $scope.selectedTab = function (tab) {
-        $scope.panel = $scope._tab = tab.id;
-        $scope.steps = [];
-        $scope.category = [];
-        $scope.options = [];
-        $scope.process = [];
-        $scope.steps = tab.steps;
-        
-    }
-
-    $scope.selectedStep = function (key,step) {
-        $scope.step_panel = $scope._step = step.id;
-        $scope._key = key;
-        
-        if($scope.process[$scope._key] != undefined){
-           
-            var step =  $scope.process[$scope._key] ;
-            $scope._category = $scope.cat_panel = step._category;
-            $scope._option = step._option;
-            
-        }else{
-          $scope.process[key] = {
-            _step : step.id,
-            _category : '',
-            _option : ''
-        };
-          $scope.options = [];  
-        }
-        
-
-        $scope.category = step.category;
-        
-    }
-    $scope.selectedCategory = function (category, index) {
-        $scope.cat_panel = $scope._category = category.id;
-        $scope.process[$scope._key]._category = category.id;
-        $scope.options = category.categories;
-    }
-
-    $scope.selectedOption = function (option) {
-        $scope.process[$scope._key]._option = option.id;
-        $scope._option = option.id;
-    }
-
-
-
-    $scope.next = function () {
-        // console.log($scope._step);
-        var key = $scope._key  ;
-        var steps = $scope.steps  ;
-        var next_step = key == $scope.steps.length-1 ? 0 : key+1;
-        
-        angular.forEach(steps, function(value, key){
-            if(key == next_step)
-                $scope.selectedStep(key,value)    
-        });
-    }
-
-    $scope.previous = function () {
-        console.log($scope._step);
-        var key = $scope._key  ;
-        var steps = $scope.steps  ;
-
-        console.log(key);
-        console.log($scope.steps.length);
-
-        var next_step = key > $scope.process_size ? 0 : key-1;
-        $('.nav-pills-steps li:eq('+next_step+') a').tab('show')
-
-        angular.forEach(steps, function(value, key){
-            if(key == next_step)
-                $scope.selectedStep(key,value)    
-        });
-        // $scope.selectedStep(steps['selectedStep'])
-
-    }
-
-})
-
-</script>
 
 
 </html>
