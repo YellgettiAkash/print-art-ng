@@ -17,15 +17,20 @@ app.controller('home', function($scope, $http,printPriceService) {
     req.then(function(data) {
         var res = data.data;
         printPriceService.setTabs(res);
-        printPriceService.setTabs(res);
+        var tabs = printPriceService.getTabs();
+        printPriceService.setDefaultTab(tabs,$scope);
+
         $scope.tabs = res;
     });
+    
+
 
     $scope.selectedTab = function(tab) {
         $scope._tab = $scope._tabPanel = tab.id;
     }
 
     $scope.selectedCategory = function (category) {
+        // printPriceService.subcategoryShowHide(category.id,$scope);
         $scope._category = $scope._categoryPanel = category.id;   
     }
 
@@ -34,8 +39,9 @@ app.controller('home', function($scope, $http,printPriceService) {
     }
 
     $scope.selectedCategories = function (categories) {
-        $scope._categories = $scope._categoriesPanel = categories.id;   
+        $scope._categories = $scope.categoriesPanel = categories.id;   
     }
+
 
 
     

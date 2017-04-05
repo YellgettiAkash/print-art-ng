@@ -16,7 +16,7 @@ $types_of_print = [
 	"canvas_photo" => [
 		"id" => "canvas_photo",
 		"name" => "Canvas Photo",
-		"category" => $photo_photo_steps
+		"category" => $mdf_photo_steps
 	],
 	"canvas_min_photo" => [
 		"id" => "canvas_min_photo",
@@ -26,7 +26,7 @@ $types_of_print = [
 	"acrylic_photo" => [
 		"id" => "acrylic_photo",
 		"name" => "Acrylic ",
-		"category" =>$photo_photo_steps
+		"category" =>$mdf_photo_steps
 	],
 	"acrylic_block_photo" => [
 		"id" => "acrylic_block_photo",

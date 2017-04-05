@@ -54,10 +54,11 @@
 
                   <div ng-repeat="category in tab.category" > 
                   <!-- Category Start Content -->
-                    <div ng-if="category.id == _categoryPanel" >
+                    <div ng-if="category.id == _categoryPanel"  >
                         <div  >
                         <!-- SubCategory Start Header -->
                             <button class="btn btn-space"
+                            ng-hide="_oneCategory"
                             ng-repeat="subcategory in category.subcategory"
                             ng-click="selectedSubCategory(subcategory)" 
                             ng-class="{'btn-primary' : subcategory.id == _subcategory,'btn-default' : subcategory.id != _subcategory }">
@@ -76,7 +77,7 @@
                                       ng-repeat="categories in subcategory.categories"
                                       ng-click="selectedCategories(categories)" 
                                       ng-class="{'btn-primary' : categories.id == _categories,'btn-default' : categories.id != _categories }">
-                                      {{ categories.name }}
+                                      {{ categories.name }} 
                                       </button>
                                       <hr>
                                   <!-- Categories End Header -->
