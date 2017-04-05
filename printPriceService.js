@@ -1,7 +1,7 @@
 
 function printPriceService() {
     
-    var tabs = [];
+    
 
     var _mat_width = 0;
     var _mat_height = 0; 
@@ -17,6 +17,9 @@ function printPriceService() {
     var _frameFrontAndBack = 0;
     var _frameCostHeight = 0;
 
+
+    var tabs = [];
+    var _process = [];
 
     var _tab = "";
     var _category = "";
@@ -69,37 +72,60 @@ function printPriceService() {
 
     var setTab = function (tab,scope,val) {
         scope._tab = scope._tabPanel = _tab = tab.id; 
-        setCategory(tab.category,scope);
+        var category = tab.category;
+        _process = [];
+        for (var i = 0; i < category.length; i++) {
+            // console.log(category[i]);
+            _process[i] = {
+                _category : '',
+                _subcategory : '',
+                _categories : ''
+            };
+            _process[i]._category  = category[i].id;
+            var subcategory = category[i].subcategory;
+
+                for (var j = 0; j < subcategory.length; j++) {
+                    if(j==0){
+                        _process[i]._subcategory = subcategory[j].id;
+                    
+                        var categories = subcategory[j].categories;   
+                        
+                        if (subcategory[j].id == "none") {
+                                    _process[i]._categories = "none";
+                        }else{
+                            for (var k = 0; k < categories.length; k++) {
+                                if(k==0){
+                                    _process[i]._categories = categories[k].id;
+                                }
+                            }    
+                        }
+                    }
+
+                    
+                }
+        }
+        console.log(_process);
+        
+        // setCategory(tab.category,scope);
     }
     
-    var setCategory = function (category,scope,val) {
-        angular.forEach(category,function(value,key){
-            if(value.active != undefined && value.active == true){
-                scope._category = scope._categoryPanel = _category = value.id;   
-                setSubCategory(value.subcategory,scope);
-            } 
-        });
+    var setCategory = function (key,category,scope) {
+        scope._category = scope._categoryPanel = _category = category.id;
+        console.log(category.subcategory);
+        // subcategoryShowHide(category.id,scope)   
+
+        setSubCategory(category.subcategory[0],scope);
     }
 
-    var setSubCategory = function (subcategory,scope,val) {
-        scope._oneCategory = false;
-            
-        angular.forEach(subcategory,function(v,k){
-            if(v.active != undefined && v.active == true){
-                scope._subcategory = scope._subcategoryPanel = _subcategory = v.id; 
-                subcategoryShowHide(v.id,scope);
-                  
-                setCategories(v.categories,scope);
-            }
-        });
+    var setSubCategory = function (subcategory,scope) {
+        scope._subcategory = scope._subcategoryPanel = _subcategory = subcategory.id; 
+        subcategoryShowHide(subcategory.id,scope);
+        // setSubCategory(subcategory.categories[0],scope);
     }
 
     var setCategories = function (categories,scope,val) {
-        angular.forEach(categories,function(va,ke){
-            if(va.active != undefined && va.active == true){
-                scope._categories = scope._categoriesPanel = _categories = va.id;   
-            }  
-        });
+        scope._categories = scope._categoriesPanel = _categories = categories.id;   
+        
     }
 
     var subcategoryShowHide = function (categoryId,scope) {
@@ -128,7 +154,7 @@ function printPriceService() {
         _paperCost = paperCost;
     }
     
-    var pictureCost = function () {
+    var getPictureCost = function () {
         return 0.10 * _productCost;
     }
 
@@ -137,11 +163,12 @@ function printPriceService() {
     }
 
     var matCost = function () {
-    
+        return (_width+(_mat_width * 2)) + (_height*(_mat_width*2)) * 2 * _frame_cost_height +(_width+(_mat_width * 2)) * (_height+(_mat_width*2))  * 2 * _frame_back_front_price ;
     }
 
     var frameCost = function () {
-    
+        _mat_width = 0;
+        return (_width+(_mat_width * 2)) + (_height*(_mat_width*2)) * 2 * _frame_cost_height +(_width+(_mat_width * 2)) * (_height+(_mat_width*2))  * 2 * _frame_back_front_price ;
     }
 
     return {
@@ -162,7 +189,7 @@ function printPriceService() {
         getProductCost          : getProductCost,
         setPaperCost           : setPaperCost,
 
-        pictureCost         : pictureCost,
+        getPictureCost         : getPictureCost,
         getPaperCost           : getPaperCost,
         matCost             : matCost,
         frameCost           : frameCost

@@ -16,7 +16,7 @@ $types_of_print = [
 	"canvas_photo" => [
 		"id" => "canvas_photo",
 		"name" => "Canvas Photo",
-		"category" => $mdf_photo_steps
+		"category" => $photo_photo_steps
 	],
 	"canvas_min_photo" => [
 		"id" => "canvas_min_photo",
