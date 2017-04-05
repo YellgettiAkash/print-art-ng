@@ -4,27 +4,31 @@ app.service('printPriceService',printPriceService);
 
 app.controller('home', function($scope, $http,printPriceService) {
 
-	//initialing the product price
-	var product_price = 10;
+    var product_price = 10;
+    
     printPriceService.setProductCost(product_price);
     $scope.product_price = printPriceService.getProductCost();
-
-    //Getting the Tabs
-    var req = $http.get('category.php');
+    
+    printPriceService.setHeightWidth(5,7.2);
+    printPriceService.setPaperCost(0.8);
+    $scope.paper_cost = printPriceService.getPaperCost();
+    
+    var req = $http.get('steps.php');
     req.then(function(data) {
-
         var res = data.data;
         printPriceService.setTabs(res);
-        $scope.tabs = res;
+        var tabs = printPriceService.getTabs();
+        printPriceService.setDefaultTab(tabs,$scope);
 
+        $scope.tabs = res;
     });
+    
 
 
     $scope.selectedTab = function(tab) {
-    	 $scope._tab = $scope._tabPanel = tab.id;
-    	// printPriceService.setTab(tab,$scope);
+        $scope._tab = $scope._tabPanel = tab.id;
     }
-    
+
     $scope.selectedCategory = function (category) {
         // printPriceService.subcategoryShowHide(category.id,$scope);
         $scope._category = $scope._categoryPanel = category.id;   
@@ -39,4 +43,7 @@ app.controller('home', function($scope, $http,printPriceService) {
     }
 
 
-});
+
+    
+
+})

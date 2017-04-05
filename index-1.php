@@ -1,110 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/angular-js/angular.min.js"></script>
-  
-<script src="printPriceService.js"></script>
-  <script src="app.js"></script>
-  
-  <style type="text/css">
-    .btn-space{
-       margin-right: 10px;
-    }
-  </style>
-</head>
+    <head>
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/angular-js/angular.min.js"></script>
+        <script src="printPriceService.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body ng-app="myApp" ng-controller="home">
+        <div class="container container-margin">
+            <div class="row">
+            	<div class="col-sm-3">
+            		<img src="assets/images/sample.jpg" class="img-responsive">
+            	</div>
+            	<div class="col-sm-7">
+            		<!-- Tabs Start Header -->
+        			<div>
+			            <button class="btn btn-space "
+			            ng-repeat="tab in tabs" 
+			            ng-click="selectedTab(tab)"
+			            ng-class="{'btn-primary' : tab.id == _tab,'tab-btn btn-default' : tab.id != _tab }">{{ tab.name }}</button>
+		            </div>
+			        <!-- Tabs End Header -->
 
-<body ng-app="myApp" ng-controller="home">
-
-
-  
-        <!-- Tabs Start Header -->
-            <button class="btn btn-space"
-            ng-repeat="tab in tabs" 
-            ng-click="selectedTab(tab)"
-            ng-class="{'btn-primary' : tab.id == _tab,'btn-default' : tab.id != _tab }">{{ tab.name }}</button>
-        <!-- Tabs End Header -->
-  
-  <hr>
-    
-
-    <div ng-repeat="tab in tabs" > 
-      <!-- Tabs Start Content -->
-        <div ng-if="tab.id == _tabPanel" >
-              
+			        <!-- Tabs Start Content -->
+        			<div ng-repeat="tab in tabs">
+            			<div ng-if="tab.id == _tabPanel">
 
 
-                <!-- Category Start -->
-                  <div  >
-                  <!-- Category Start Header -->
-                      <button class="btn btn-space"
-                      ng-repeat="category in tab.category"
-                      ng-click="selectedCategory(category)" 
-                      ng-class="{'btn-primary' : category.id == _category,'btn-default' : category.id != _category }">
-                      {{ category.name }}
-                      </button>
-                      <hr>
-                  <!-- Category End Header -->
-                  </div>
+				            <!-- Category Start Header -->
+		        			<div class="print-header">
+                                <h4>Steps </h4>
+                                <hr>
+					            <button class="btn btn-space"
+			                      ng-repeat="category in tab.category"
+			                      ng-click="selectedCategory(category)" 
+			                      ng-class="{'btn-primary' : category.id == _category,'btn-default' : category.id != _category }">
+			                      {{ category.name }}
+			                    </button>
+				            </div>
+					        <!-- Category End Header -->
 
-                  <div ng-repeat="category in tab.category" > 
-                  <!-- Category Start Content -->
-                    <div ng-if="category.id == _categoryPanel"  >
-                        <div  >
-                        <!-- SubCategory Start Header -->
-                            <button class="btn btn-space"
-                            ng-hide="_oneCategory"
-                            ng-repeat="subcategory in category.subcategory"
-                            ng-click="selectedSubCategory(subcategory)" 
-                            ng-class="{'btn-primary' : subcategory.id == _subcategory,'btn-default' : subcategory.id != _subcategory }">
-                            {{ subcategory.name }}
-                            </button>
-                            <hr>
-                        <!-- SubCategory End Header -->
-                        </div>
+					        <!-- Category Start Content -->
+		        			 <div ng-repeat="category in tab.category" > 
+                 				<div ng-if="category.id == _categoryPanel"  >
 
-                        <div ng-repeat="subcategory in category.subcategory" >
-                          <!-- SubCategory Start Content -->
-                            <div ng-if="subcategory.id == _subcategoryPanel" >
-                                <div  >
-                                  <!-- Categories Start Header -->
-                                      <button class="btn btn-space"
-                                      ng-repeat="categories in subcategory.categories"
-                                      ng-click="selectedCategories(categories)" 
-                                      ng-class="{'btn-primary' : categories.id == _categories,'btn-default' : categories.id != _categories }">
-                                      {{ categories.name }} 
-                                      </button>
-                                      <hr>
-                                  <!-- Categories End Header -->
-                                  </div>
+                                    <!-- SubCategory Start Header -->
+                                    <div class="print-header"> 
+                                        <h4>Category</h4>
+                                        <hr>
+                 				        <button class="btn btn-space"
+                                            ng-hide="_oneCategory"
+                                            ng-repeat="subcategory in category.subcategory"
+                                            ng-click="selectedSubCategory(subcategory)" 
+                                            ng-class="{'btn-primary' : subcategory.id == _subcategory,'btn-default' : subcategory.id != _subcategory }">
+                                            {{ subcategory.name }}
+                                        </button>  
+                                    </div>
+                                     <!-- SubCategory End Header -->
 
-                            </div>
-                        <!-- SubCategory End Header -->
-                        </div>
+                                     <!-- SubCategory Start Content -->
+                                    <div ng-repeat="subcategory in category.subcategory" >
+                                        <div ng-if="subcategory.id == _subcategoryPanel" >
+                                            
+                                            <!-- Options Start Header -->
+                                            <div class="print-header"> 
+                                                <h4>Options</h4>
+                                                <hr>
+                                                <button class="btn btn-space"
+                                                  ng-repeat="categories in subcategory.categories"
+                                                  ng-click="selectedCategories(categories)" 
+                                                  ng-class="{'btn-primary' : categories.id == _categories,'btn-default' : categories.id != _categories }">
+                                                  {{ categories.name }} 
+                                                </button> 
+                                            
+                                            </div>
+                                             <!-- Options End Header -->
 
 
-                    </div>
-                  <!-- Category End Content -->      
-                  </div> 
-                  
-                  
-                <!-- Category End -->  
+                                        </div>
+                                    </div>
+                                    <!-- SubCategory End Content -->
 
-<!-- Tabs End Content -->
+
+		            			</div>
+		            		</div>
+		            		<!-- Category Start Content -->
+
+
+			            </div>
+		            </div>
+			        <!-- Tabs End Content -->
+
+            	</div>
+            	
             </div>
         </div>
-
-
-
-    <!-- Tabs Ends  -->
-  </div>
-
-</body>
-
-
+    </body>
 </html>

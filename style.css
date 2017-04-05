@@ -1,0 +1,50 @@
+.container-margin{
+	margin-top: 70px;
+}
+.print-header{
+	margin-top: 20px;
+}
+.btn-space{
+    margin-right: 5px;
+}
+.btn-default:hover, .btn-primary.focus, .btn-primary:focus {
+	color: #fff;
+	background-color: #ff5e25;
+	border-color: #ff5e25;
+}
+hr {
+	margin: 0px;
+	padding-bottom: 10px;
+	border-top: 3px solid #ff5e25;
+}
+.btn-primary{
+	color: #fff;
+	background-color: #ff5e25;
+	border-color: #ff5e25;
+}
+
+.btn:hover {
+	color: #fff;
+	background-color: #ff5e25;
+	border-color: #ff5e25;
+}
+
+.tab-btn{
+	background: #000;
+	color: #ff5e25;
+}
+
+.category-btn{
+	background: #000;
+	color: #000;
+}
+
+.subcategory-btn{
+	background: #000;
+	color: #000;
+}
+
+.categories-btn{
+	background: #000;
+	color: #fff;
+}
