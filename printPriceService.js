@@ -21,6 +21,7 @@ function printPriceService() {
     var tabs = [];
     var _process = [];
 
+    var _key = "";
     var _tab = "";
     var _category = "";
     var _subcategory = "";
@@ -111,21 +112,48 @@ function printPriceService() {
     
     var setCategory = function (key,category,scope) {
         scope._category = scope._categoryPanel = _category = category.id;
-        console.log(category.subcategory);
-        // subcategoryShowHide(category.id,scope)   
+        _key = key;
+        
+        var subcategory = category.subcategory;
+        var id = 0;
+        for (var i = 0; i < subcategory.length; i++) {
+            if(subcategory[i].id == _process[_key]._subcategory){
+                id = i;
+            }
+        };
 
-        setSubCategory(category.subcategory[0],scope);
+        setSubCategory(subcategory[id],scope);        
+        
     }
 
     var setSubCategory = function (subcategory,scope) {
         scope._subcategory = scope._subcategoryPanel = _subcategory = subcategory.id; 
         subcategoryShowHide(subcategory.id,scope);
-        // setSubCategory(subcategory.categories[0],scope);
+        
+        if (_process[_key]._subcategory != _subcategory) {
+            _process[_key]._subcategory = _subcategory;
+        };
+        console.log(_process);
+        var categories = subcategory.categories;
+        var id = 0;
+        for (var i = 0; i < categories.length; i++) {
+            if(categories[i].id == _process[_key]._categories){
+                id = i; 
+            }
+        };
+        if (_subcategory == "none" ) {
+            scope._categories = scope._categoriesPanel = _categories = categories.id;   
+        }else{
+            setCategories(categories[id],scope);        
+        };
     }
 
-    var setCategories = function (categories,scope,val) {
+    var setCategories = function (categories,scope) {
         scope._categories = scope._categoriesPanel = _categories = categories.id;   
-        
+        if (_process[_key]._categories != _categories) {
+            _process[_key]._categories = _categories;
+        };
+        console.log(_process);
     }
 
     var subcategoryShowHide = function (categoryId,scope) {

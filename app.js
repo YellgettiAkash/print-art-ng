@@ -31,16 +31,14 @@ app.controller('home', function($scope, $http,printPriceService) {
     
     $scope.selectedCategory = function (key,category) {
         printPriceService.setCategory(key,category,$scope);
-        // printPriceService.subcategoryShowHide(category.id,$scope);
-        // $scope._category = $scope._categoryPanel = category.id;   
     }
 
     $scope.selectedSubCategory = function (subcategory) {
-        $scope._subcategory = $scope._subcategoryPanel = subcategory.id;   
+        printPriceService.setSubCategory(subcategory,$scope);
     }
 
     $scope.selectedCategories = function (categories) {
-        $scope._categories = $scope.categoriesPanel = categories.id;   
+        printPriceService.setCategories(categories,$scope);
     }
 
 
