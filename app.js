@@ -41,5 +41,12 @@ app.controller('home', function($scope, $http,printPriceService) {
         printPriceService.setCategories(categories,$scope);
     }
 
+    $scope.next = function() {
+        printPriceService.getNext($scope);
+    }
+    $scope.previous = function(){
+        printPriceService.getPrevious($scope);
+    }
+
 
 });

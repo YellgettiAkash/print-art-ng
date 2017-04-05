@@ -18,7 +18,8 @@ function printPriceService() {
     var _frameCostHeight = 0;
 
 
-    var tabs = [];
+    var _tabs = [];
+    var _tabCategory = [];
     var _process = [];
 
     var _key = "";
@@ -73,7 +74,7 @@ function printPriceService() {
 
     var setTab = function (tab,scope,val) {
         scope._tab = scope._tabPanel = _tab = tab.id; 
-        var category = tab.category;
+        var category = _tabCategory = tab.category;
         _process = [];
         for (var i = 0; i < category.length; i++) {
             // console.log(category[i]);
@@ -106,8 +107,8 @@ function printPriceService() {
                 }
         }
         console.log(_process);
-        
-        // setCategory(tab.category,scope);
+        var id = 0;
+        setCategory(id,category[id],scope);
     }
     
     var setCategory = function (key,category,scope) {
@@ -133,7 +134,7 @@ function printPriceService() {
         if (_process[_key]._subcategory != _subcategory) {
             _process[_key]._subcategory = _subcategory;
         };
-        console.log(_process);
+        // console.log(_process);
         var categories = subcategory.categories;
         var id = 0;
         for (var i = 0; i < categories.length; i++) {
@@ -153,7 +154,7 @@ function printPriceService() {
         if (_process[_key]._categories != _categories) {
             _process[_key]._categories = _categories;
         };
-        console.log(_process);
+        // console.log(_process);
     }
 
     var subcategoryShowHide = function (categoryId,scope) {
@@ -164,6 +165,16 @@ function printPriceService() {
         }
         
     }
+
+    var getNext = function (scope) {
+        var index = _key == _process.length - 1 ? 0 : _key + 1;
+        setCategory(index,_tabCategory[index],scope);
+    }
+
+    var getPrevious = function (scope) {
+        var index = _key == 0 ? _process.length-1 : _key - 1;
+        setCategory(index,_tabCategory[index],scope);
+    }    
     
     var setProductCost = function (productCost) {
         _productCost = productCost;
@@ -202,6 +213,9 @@ function printPriceService() {
     return {
         setTabs : setTabs,
         getTabs : getTabs,
+
+        getNext : getNext,
+        getPrevious : getPrevious,
 
         setTab : setTab,
         setCategory : setCategory,

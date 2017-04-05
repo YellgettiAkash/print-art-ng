@@ -101,14 +101,14 @@
                                                 </div>
                                                 <!-- SubCategory End Content -->
 
-                                                
+
                                             </div>
                                         </div>
                                         <!-- Category Start Content -->
                                         <div class="print-header">
                                             <hr>
-                                            <button class="btn tab-btn btn-default">previous</button>
-                                            <button class="btn tab-btn btn-default pull-right">next</button>
+                                            <button ng-click="previous()" class="btn tab-btn btn-default">previous</button>
+                                            <button ng-click="next()" class="btn tab-btn btn-default pull-right">next</button>
                                         </div>
                                     </div>
                                 </div>
