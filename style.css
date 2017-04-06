@@ -22,6 +22,42 @@ hr {
 	background-color: #ff5e25;
 	border-color: #ff5e25;
 }
+.myDiv{
+    float: left;
+    margin: 5px;
+    margin-left: 0px;
+}
+.steps {
+    display: inline-block;
+}
+.step-title {
+    margin-left: 10px;
+    margin-right: 10px;
+    /*color: #ff5e25;*/
+}
+.step-content{
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+
+}
+.step-icon-selected {
+    border-radius:  100% ;
+    color: #ff5e25;
+    background: #ff5e25;
+    width: 15px;
+    height:  15px;
+    margin: auto;
+    display: block;
+}
+.step-icon {
+    border-radius:  100% ;
+    border:1px solid black;
+    width: 15px;
+    height:  15px;
+    margin: auto;
+    display: block;
+}
 
 .btn:hover {
 	color: #fff;

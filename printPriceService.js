@@ -143,6 +143,7 @@ function printPriceService() {
 
     var setCategory = function(key, category, scope) {
         scope._category = scope._categoryPanel = _category = category.id;
+        scope._category_name =  category.name;
         _key = key;
 
         var subcategory = category.subcategory;
