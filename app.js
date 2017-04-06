@@ -10,9 +10,9 @@ app.controller('home', function($scope, $http,printPriceService) {
     printPriceService.setProductCost(product_cost);
     $scope.product_cost = printPriceService.getProductCost();
     $scope.picture_cost = printPriceService.getPictureCost();
-    $scope.paper_cost = 0;
-    $scope.frame_cost = 0;
-    $scope.mat_cost = 0;
+    $scope.paperCost = 0;
+    $scope.frameCost = 0;
+    $scope.matCost = 0;
 
     //Getting the Tabs
     var req = $http.get('category.php');
