@@ -12,10 +12,27 @@
 	background-color: #ff5e25;
 	border-color: #ff5e25;
 }
+.img-frame-size{
+    height: 100px;
+    width: 100px;
+    margin-right: 10px;
+    margin-top: 10px;
+    display: inline-block;
+}
 hr {
 	margin: 0px;
 	padding-bottom: 10px;
 	border-top: 3px solid #ff5e25;
+}
+.grey{
+    margin-top: 40px;
+  background: #eee;
+}
+.red{
+  background: red;
+}
+.blue{
+  background: blue;
 }
 
 .btn-primary{

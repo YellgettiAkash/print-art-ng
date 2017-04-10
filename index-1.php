@@ -104,14 +104,36 @@
                                                    </button>   
                                                 </div>
 
-                                                <div class="col-sm-3 print-header" ng-if="_categoryPanel == 'frame' && _subcategoryPanel == 'classic'" ng-repeat="categories in subcategory.categories">
-                                                   <div class="row">
+                                                <div  ng-if="_categoryPanel == 'frame' && _subcategoryPanel == 'classic'" >
+                                                   
                                                       <img ng-src="{{ categories.id }}"
+                                                      ng-repeat="categories in subcategory.categories"
                                                       ng-class="{'frame-borders' : categories.id == _categories }"
                                                       ng-click="selectedCategories(categories)" 
-                                                      class="img-responsive img-custom">
-                                                   </div> 
+                                                      class="img-responsive img-frame-size">
+
+                                                      <div class="print-header">
+                                                         <h4>Options-Category </h4>
+                                                         <hr>
+                                                         <button class="btn btn-space"
+                                                         ng-repeat="subcategories in category.subcategories"
+                                                         ng-click="selectedSubCategories(subcategories)" 
+                                                         ng-class="{'btn-primary' : subcategories.id == _subcategories,'btn-default' : subcategories.id != _subcategories }">
+                                                         {{ subcategories.name }} 
+                                                         </button>
+                                                      </div>
                                                 </div> 
+
+                                                <div ng-if="_categoryPanel == 'frame' && _subcategoryPanel == 'color'">
+                                                   <div 
+                                                      ng-repeat="categories in subcategory.categories"
+                                                      ng-click="selectedCategories(categories)" q
+                                                      class="img-frame-size text-center {{ categories.id }}"
+                                                      >
+                                                  <p>{{ categories.name }} </p> 
+                                                   </div>   
+                                                </div>
+
                                           </div>
                                           <!-- Options End Header -->
 

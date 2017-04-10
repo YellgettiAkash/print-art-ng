@@ -8,7 +8,16 @@ $photo_photo_steps =[
             ["id" => "mat_hq", "name" => "Mat-HQ", "price" => 3]
         ]]
     ], ],
-    ["id" => "frame", "name" => "Frame Photo", "subcategory" => [
+    ["id" => "frame", "name" => "Frame Photo", 
+    "subcategories" => [
+          [
+            "id" => "mdf-frame", "name" => "MDF Frame", "price" => 5
+          ],
+          [
+            "id" => "wooden-frame", "name" => "Wooden Frame", "price" => 5
+          ],
+        ],
+    "subcategory" => [
         ["id" => "none", "name" => "none",   "categories" => []],
         ["id" => "classic", "name" => "classic", "categories" => [
             [
@@ -85,7 +94,8 @@ $photo_photo_steps =[
             ['id' => 'grey', 'name' => 'frame1', 'price' => 10, ],
             ['id' => 'red', 'name' => 'frame2', 'price' => 15, ],
             ['id' => 'blue', 'name' => 'frame3', 'price' => 10, ]
-        ]],
+          ]
+        ],
     ], ],
     ["id" => "print_size", "name" => "Print Size", "subcategory" => [
         ["id" => "information", "name" => "information",  "categories" => [

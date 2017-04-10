@@ -20,6 +20,9 @@
   float: left;
   border: 1px solid grey;
 }
+.borders{
+  border : 5px solid black;
+}
 .grey{
   background: #eee;
 }
