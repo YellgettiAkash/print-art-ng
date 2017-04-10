@@ -24,9 +24,14 @@ hr {
 	padding-bottom: 10px;
 	border-top: 3px solid #ff5e25;
 }
+.borders{
+
+    border :5px solid #000;
+}
 .grey{
-    margin-top: 40px;
+    
   background: #eee;
+  border :5px solid #eee;
 }
 .red{
   background: red;

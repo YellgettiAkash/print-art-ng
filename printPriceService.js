@@ -130,8 +130,7 @@ function printPriceService() {
         if (category == "frame" && subcategory != "none") {
              setFrameCost(categories.price); 
              setImageClasses(categories.class,scope); 
-
-        }
+        }            
         if (category == "mat" && subcategory == "color") {
              setHeightWidth(categories.height,categories.width);   
         }

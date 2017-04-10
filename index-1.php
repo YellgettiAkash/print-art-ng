@@ -108,9 +108,9 @@
                                                    
                                                       <img ng-src="{{ categories.id }}"
                                                       ng-repeat="categories in subcategory.categories"
-                                                      ng-class="{'frame-borders' : categories.id == _categories }"
+                                                      ng-class="{'borders' : categories.id == _categories }"
                                                       ng-click="selectedCategories(categories)" 
-                                                      class="img-responsive img-frame-size">
+                                                      class="img-frame-size">
 
                                                       <div class="print-header">
                                                          <h4>Options-Category </h4>
@@ -128,8 +128,8 @@
                                                    <div 
                                                       ng-repeat="categories in subcategory.categories"
                                                       ng-click="selectedCategories(categories)" q
-                                                      class="img-frame-size text-center {{ categories.id }}"
-                                                      >
+                                                      ng-class="{'borders' : categories.id == _categories }"
+                                                      class="img-frame-size {{ categories.id }}">
                                                   <p>{{ categories.name }} </p> 
                                                    </div>   
                                                 </div>

@@ -18,8 +18,8 @@ app.controller('home', function($scope, $http,printPriceService) {
     //     frameCost : 0,
     //     matCost : 0
     // };
-    $scope.product_cost = printPriceService.getProductCost();
-    $scope.picture_cost = printPriceService.getPictureCost();
+    $scope.productCost = printPriceService.getProductCost();
+    $scope.pictureCost = printPriceService.getPictureCost();
     $scope.imageFrameClass = printPriceService.setImageClasses('frame_style_3',$scope);
     //Getting the Tabs
     var req = $http.get('category.php');
