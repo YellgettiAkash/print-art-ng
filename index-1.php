@@ -5,6 +5,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+      <link rel="stylesheet" href="assets/css/custom.css">
       <link rel="stylesheet" href="style.css">
       <script src="assets/js/jquery.min.js"></script>
       <script src="assets/js/bootstrap.min.js"></script>
@@ -18,7 +19,7 @@
             <div class="col-sm-4">
                <div class="panel panel-default">
                   <div class="panel-body">
-                     <img src="assets/images/sample.jpg" class="img-responsive">
+                     <img src="assets/images/sample.jpg" class="img-responsive {{ imageFrameClass }}">
                   </div>
                </div>
             </div>
@@ -93,12 +94,24 @@
                                           <div class="print-header">
                                              <h4>Options</h4>
                                              <hr>
-                                             <button class="btn btn-space"
-                                                ng-repeat="categories in subcategory.categories"
-                                                ng-click="selectedCategories(categories)" 
-                                                ng-class="{'btn-primary' : categories.id == _categories,'btn-default' : categories.id != _categories }">
-                                             {{ categories.name }} 
-                                             </button> 
+
+                                                <div ng-if="_categoryPanel != 'frame' && _subcategoryPanel != 'frame'">
+                                                   <button class="btn btn-space"
+                                                      ng-repeat="categories in subcategory.categories"
+                                                      ng-click="selectedCategories(categories)" 
+                                                      ng-class="{'btn-primary' : categories.id == _categories,'btn-default' : categories.id != _categories }">
+                                                   {{ categories.name }} 
+                                                   </button>   
+                                                </div>
+
+                                                <div class="col-sm-3 print-header" ng-if="_categoryPanel == 'frame' && _subcategoryPanel == 'classic'" ng-repeat="categories in subcategory.categories">
+                                                   <div class="row">
+                                                      <img ng-src="{{ categories.id }}"
+                                                      ng-class="{'frame-borders' : categories.id == _categories }"
+                                                      ng-click="selectedCategories(categories)" 
+                                                      class="img-responsive img-custom">
+                                                   </div> 
+                                                </div> 
                                           </div>
                                           <!-- Options End Header -->
 

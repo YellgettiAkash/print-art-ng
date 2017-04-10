@@ -9,6 +9,9 @@
 .top-margins{
   margin-top:20px; 
 }
+.frame-borders{
+  border: 1px solid black;
+}
 .img-custom-frame{
   width: 100px;
   height: 100px;

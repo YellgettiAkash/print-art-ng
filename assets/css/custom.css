@@ -1,35 +1,35 @@
 .frame_style_1 {
 border: 1.8em double #edb742 !important; 
 /* Safari and Chrome */
--webkit-border-image-source: url(assets/images/frames/full-frame-max1.png) !important; 
+-webkit-border-image-source: url(../images/frames/full-frame-max1.png) !important; 
 -webkit-border-image-slice: 56 !important;  
 -webkit-border-image-width: 1.9em !important;  
 -webkit-border-image-outset: 0 !important;  
 -webkit-border-image-repeat: round !important;  
 
 /* Firefox */
--moz-border-image-source: url(assets/images/frames/full-frame-max1.png) !important;  
+-moz-border-image-source: url(../images/frames/full-frame-max1.png) !important;  
 -moz-border-image-slice: 56 !important; 
 -moz-border-image-width: 1.9em !important; 
 -moz-border-image-outset: 0 !important;  
 -moz-border-image-repeat: round !important; 
 
 /* Internet Explorer */
--ms-border-image-source: url(assets/images/frames/full-frame-max1.png) !important;  
+-ms-border-image-source: url(../images/frames/full-frame-max1.png) !important;  
 -ms-border-image-slice: 56 !important;  
 -ms-border-image-width: 1.9em !important;  
 -ms-border-image-outset: 0 !important;  
 -ms-border-image-repeat: round !important;  
 
 /* Opera */
--o-border-image-source: url(assets/images/frames/full-frame-max1.png) !important;  
+-o-border-image-source: url(../images/frames/full-frame-max1.png) !important;  
 -o-border-image-slice: 56 !important;  
 -o-border-image-width: 1.9em !important;  
 -o-border-image-outset: 0 !important;  
 -o-border-image-repeat: round !important;  
 
 /* CSS3 */
-border-image-source: url(assets/images/frames/full-frame-max1.png) !important; 
+border-image-source: url(../images/frames/full-frame-max1.png) !important; 
 border-image-slice: 56 !important; 
 border-image-width: 1.9em !important;  
 border-image-outset: 0 !important; 
@@ -40,35 +40,35 @@ border-image-repeat: round !important;
 .frame_style_2 {
 border: 1.8em double #edb742 !important; 
 /* Safari and Chrome */
--webkit-border-image-source: url(assets/images/frames/full-frame-max2.png) !important; 
+-webkit-border-image-source: url(../images/frames/full-frame-max2.png) !important; 
 -webkit-border-image-slice: 56 !important;  
 -webkit-border-image-width: 2.1em !important;  
 -webkit-border-image-outset: 0 !important;  
 -webkit-border-image-repeat: round !important;  
 
 /* Firefox */
--moz-border-image-source: url(assets/images/frames/full-frame-max2.png) !important;  
+-moz-border-image-source: url(../images/frames/full-frame-max2.png) !important;  
 -moz-border-image-slice: 56 !important; 
 -moz-border-image-width: 2.1em !important; 
 -moz-border-image-outset: 0 !important;  
 -moz-border-image-repeat: round !important; 
 
 /* Internet Explorer */
--ms-border-image-source: url(assets/images/frames/full-frame-max2.png) !important;  
+-ms-border-image-source: url(../images/frames/full-frame-max2.png) !important;  
 -ms-border-image-slice: 56 !important;  
 -ms-border-image-width: 2.1em !important;  
 -ms-border-image-outset: 0 !important;  
 -ms-border-image-repeat: round !important;  
 
 /* Opera */
--o-border-image-source: url(assets/images/frames/full-frame-max2.png) !important;  
+-o-border-image-source: url(../images/frames/full-frame-max2.png) !important;  
 -o-border-image-slice: 56 !important;  
 -o-border-image-width: 2.1em !important;  
 -o-border-image-outset: 0 !important;  
 -o-border-image-repeat: round !important;  
 
 /* CSS3 */
-border-image-source: url(assets/images/frames/full-frame-max2.png) !important; 
+border-image-source: url(../images/frames/full-frame-max2.png) !important; 
 border-image-slice: 56 !important; 
 border-image-width: 2.1em !important;  
 border-image-outset: 0 !important; 
@@ -80,35 +80,35 @@ border-image-repeat: round !important;
 .frame_style_3 {
 border: 1.1em double #edb742 !important; 
 /* Safari and Chrome */
--webkit-border-image-source: url(assets/images/frames/full-frame-max3.png) !important; 
+-webkit-border-image-source: url(../images/frames/full-frame-max3.png) !important; 
 -webkit-border-image-slice: 56 !important;  
 -webkit-border-image-width: 2.6em !important;  
 -webkit-border-image-outset: 0 !important;  
 -webkit-border-image-repeat: round !important;  
 
 /* Firefox */
--moz-border-image-source: url(assets/images/frames/full-frame-max3.png) !important;  
+-moz-border-image-source: url(../images/frames/full-frame-max3.png) !important;  
 -moz-border-image-slice: 56 !important; 
 -moz-border-image-width: 2.6em !important; 
 -moz-border-image-outset: 0 !important;  
 -moz-border-image-repeat: round !important; 
 
 /* Internet Explorer */
--ms-border-image-source: url(assets/images/frames/full-frame-max3.png) !important;  
+-ms-border-image-source: url(../images/frames/full-frame-max3.png) !important;  
 -ms-border-image-slice: 56 !important;  
 -ms-border-image-width: 2.6em !important;  
 -ms-border-image-outset: 0 !important;  
 -ms-border-image-repeat: round !important;  
 
 /* Opera */
--o-border-image-source: url(assets/images/frames/full-frame-max3.png) !important;  
+-o-border-image-source: url(../images/frames/full-frame-max3.png) !important;  
 -o-border-image-slice: 56 !important;  
 -o-border-image-width: 2.6em !important;  
 -o-border-image-outset: 0 !important;  
 -o-border-image-repeat: round !important;  
 
 /* CSS3 */
-border-image-source: url(assets/images/frames/full-frame-max3.png) !important; 
+border-image-source: url(../images/frames/full-frame-max3.png) !important; 
 border-image-slice: 56 !important; 
 border-image-width: 2.6em !important;  
 border-image-outset: 0 !important; 
@@ -118,35 +118,35 @@ border-image-repeat: round !important;
 .frame_style_4 {
 border: 1.3em double #edb742 !important; 
 /* Safari and Chrome */
--webkit-border-image-source: url(assets/images/frames/full-frame-max4.png) !important; 
+-webkit-border-image-source: url(../images/frames/full-frame-max4.png) !important; 
 -webkit-border-image-slice: 56 !important;  
 -webkit-border-image-width: 2.6em !important;  
 -webkit-border-image-outset: 0 !important;  
 -webkit-border-image-repeat: round !important;  
 
 /* Firefox */
--moz-border-image-source: url(assets/images/frames/full-frame-max4.png) !important;  
+-moz-border-image-source: url(../images/frames/full-frame-max4.png) !important;  
 -moz-border-image-slice: 56 !important; 
 -moz-border-image-width: 2.6em !important; 
 -moz-border-image-outset: 0 !important;  
 -moz-border-image-repeat: round !important; 
 
 /* Internet Explorer */
--ms-border-image-source: url(assets/images/frames/full-frame-max4.png) !important;  
+-ms-border-image-source: url(../images/frames/full-frame-max4.png) !important;  
 -ms-border-image-slice: 56 !important;  
 -ms-border-image-width: 2.6em !important;  
 -ms-border-image-outset: 0 !important;  
 -ms-border-image-repeat: round !important;  
 
 /* Opera */
--o-border-image-source: url(assets/images/frames/full-frame-max4.png) !important;  
+-o-border-image-source: url(../images/frames/full-frame-max4.png) !important;  
 -o-border-image-slice: 56 !important;  
 -o-border-image-width: 2.6em !important;  
 -o-border-image-outset: 0 !important;  
 -o-border-image-repeat: round !important;  
 
 /* CSS3 */
-border-image-source: url(assets/images/frames/full-frame-max4.png) !important; 
+border-image-source: url(../images/frames/full-frame-max4.png) !important; 
 border-image-slice: 56 !important; 
 border-image-width: 2.6em !important;  
 border-image-outset: 0 !important; 
@@ -156,35 +156,35 @@ border-image-repeat: round !important;
 .frame_style_5 {
 border: 1.6em double #edb742 !important; 
 /* Safari and Chrome */
--webkit-border-image-source: url(assets/images/frames/full-frame-max5.png) !important; 
+-webkit-border-image-source: url(../images/frames/full-frame-max5.png) !important; 
 -webkit-border-image-slice: 56 !important;  
 -webkit-border-image-width: 2.6em !important;  
 -webkit-border-image-outset: 0 !important;  
 -webkit-border-image-repeat: round !important;  
 
 /* Firefox */
--moz-border-image-source: url(assets/images/frames/full-frame-max5.png) !important;  
+-moz-border-image-source: url(../images/frames/full-frame-max5.png) !important;  
 -moz-border-image-slice: 56 !important; 
 -moz-border-image-width: 2.6em !important; 
 -moz-border-image-outset: 0 !important;  
 -moz-border-image-repeat: round !important; 
 
 /* Internet Explorer */
--ms-border-image-source: url(assets/images/frames/full-frame-max5.png) !important;  
+-ms-border-image-source: url(../images/frames/full-frame-max5.png) !important;  
 -ms-border-image-slice: 56 !important;  
 -ms-border-image-width: 2.6em !important;  
 -ms-border-image-outset: 0 !important;  
 -ms-border-image-repeat: round !important;  
 
 /* Opera */
--o-border-image-source: url(assets/images/frames/full-frame-max5.png) !important;  
+-o-border-image-source: url(../images/frames/full-frame-max5.png) !important;  
 -o-border-image-slice: 56 !important;  
 -o-border-image-width: 2.6em !important;  
 -o-border-image-outset: 0 !important;  
 -o-border-image-repeat: round !important;  
 
 /* CSS3 */
-border-image-source: url(assets/images/frames/full-frame-max5.png) !important; 
+border-image-source: url(../images/frames/full-frame-max5.png) !important; 
 border-image-slice: 56 !important; 
 border-image-width: 2.6em !important;  
 border-image-outset: 0 !important; 
@@ -194,35 +194,35 @@ border-image-repeat: round !important;
 .frame_style_6 {
 border: 1.2em double #edb742 !important; 
 /* Safari and Chrome */
--webkit-border-image-source: url(assets/images/frames/full-frame-max6.png) !important; 
+-webkit-border-image-source: url(../images/frames/full-frame-max6.png) !important; 
 -webkit-border-image-slice: 56 !important;  
 -webkit-border-image-width: 2.8em !important;  
 -webkit-border-image-outset: 0 !important;  
 -webkit-border-image-repeat: round !important;  
 
 /* Firefox */
--moz-border-image-source: url(assets/images/frames/full-frame-max6.png) !important;  
+-moz-border-image-source: url(../images/frames/full-frame-max6.png) !important;  
 -moz-border-image-slice: 56 !important; 
 -moz-border-image-width: 2.8em !important; 
 -moz-border-image-outset: 0 !important;  
 -moz-border-image-repeat: round !important; 
 
 /* Internet Explorer */
--ms-border-image-source: url(assets/images/frames/full-frame-max6.png) !important;  
+-ms-border-image-source: url(../images/frames/full-frame-max6.png) !important;  
 -ms-border-image-slice: 56 !important;  
 -ms-border-image-width: 2.8em !important;  
 -ms-border-image-outset: 0 !important;  
 -ms-border-image-repeat: round !important;  
 
 /* Opera */
--o-border-image-source: url(assets/images/frames/full-frame-max6.png) !important;  
+-o-border-image-source: url(../images/frames/full-frame-max6.png) !important;  
 -o-border-image-slice: 56 !important;  
 -o-border-image-width: 2.8em !important;  
 -o-border-image-outset: 0 !important;  
 -o-border-image-repeat: round !important;  
 
 /* CSS3 */
-border-image-source: url(assets/images/frames/full-frame-max6.png) !important; 
+border-image-source: url(../images/frames/full-frame-max6.png) !important; 
 border-image-slice: 56 !important; 
 border-image-width: 2.8em !important;  
 border-image-outset: 0 !important; 
@@ -232,35 +232,35 @@ border-image-repeat: round !important;
 .frame_style_7 {
 border: 1.3em double #edb742 !important; 
 /* Safari and Chrome */
--webkit-border-image-source: url(assets/images/frames/full-frame-max7.png) !important; 
+-webkit-border-image-source: url(../images/frames/full-frame-max7.png) !important; 
 -webkit-border-image-slice: 56 !important;  
 -webkit-border-image-width: 2.6em !important;  
 -webkit-border-image-outset: 0 !important;  
 -webkit-border-image-repeat: round !important;  
 
 /* Firefox */
--moz-border-image-source: url(assets/images/frames/full-frame-max7.png) !important;  
+-moz-border-image-source: url(../images/frames/full-frame-max7.png) !important;  
 -moz-border-image-slice: 56 !important; 
 -moz-border-image-width: 2.6em !important; 
 -moz-border-image-outset: 0 !important;  
 -moz-border-image-repeat: round !important; 
 
 /* Internet Explorer */
--ms-border-image-source: url(assets/images/frames/full-frame-max7.png) !important;  
+-ms-border-image-source: url(../images/frames/full-frame-max7.png) !important;  
 -ms-border-image-slice: 56 !important;  
 -ms-border-image-width: 2.6em !important;  
 -ms-border-image-outset: 0 !important;  
 -ms-border-image-repeat: round !important;  
 
 /* Opera */
--o-border-image-source: url(assets/images/frames/full-frame-max7.png) !important;  
+-o-border-image-source: url(../images/frames/full-frame-max7.png) !important;  
 -o-border-image-slice: 56 !important;  
 -o-border-image-width: 2.6em !important;  
 -o-border-image-outset: 0 !important;  
 -o-border-image-repeat: round !important;  
 
 /* CSS3 */
-border-image-source: url(assets/images/frames/full-frame-max7.png) !important; 
+border-image-source: url(../images/frames/full-frame-max7.png) !important; 
 border-image-slice: 56 !important; 
 border-image-width: 2.6em !important;  
 border-image-outset: 0 !important; 
@@ -270,35 +270,35 @@ border-image-repeat: round !important;
 .frame_style_8 {
 border: 1.8em double #edb742 !important; 
 /* Safari and Chrome */
--webkit-border-image-source: url(assets/images/frames/full-frame-max8.png) !important; 
+-webkit-border-image-source: url(../images/frames/full-frame-max8.png) !important; 
 -webkit-border-image-slice: 56 !important;  
 -webkit-border-image-width: 2.1em !important;  
 -webkit-border-image-outset: 0 !important;  
 -webkit-border-image-repeat: round !important;  
 
 /* Firefox */
--moz-border-image-source: url(assets/images/frames/full-frame-max8.png) !important;  
+-moz-border-image-source: url(../images/frames/full-frame-max8.png) !important;  
 -moz-border-image-slice: 56 !important; 
 -moz-border-image-width: 2.1em !important; 
 -moz-border-image-outset: 0 !important;  
 -moz-border-image-repeat: round !important; 
 
 /* Internet Explorer */
--ms-border-image-source: url(assets/images/frames/full-frame-max8.png) !important;  
+-ms-border-image-source: url(../images/frames/full-frame-max8.png) !important;  
 -ms-border-image-slice: 56 !important;  
 -ms-border-image-width: 2.1em !important;  
 -ms-border-image-outset: 0 !important;  
 -ms-border-image-repeat: round !important;  
 
 /* Opera */
--o-border-image-source: url(assets/images/frames/full-frame-max8.png) !important;  
+-o-border-image-source: url(../images/frames/full-frame-max8.png) !important;  
 -o-border-image-slice: 56 !important;  
 -o-border-image-width: 2.1em !important;  
 -o-border-image-outset: 0 !important;  
 -o-border-image-repeat: round !important;  
 
 /* CSS3 */
-border-image-source: url(assets/images/frames/full-frame-max8.png) !important; 
+border-image-source: url(../images/frames/full-frame-max8.png) !important; 
 border-image-slice: 56 !important; 
 border-image-width: 2.1em !important;  
 border-image-outset: 0 !important; 
@@ -307,35 +307,35 @@ border-image-repeat: round !important;
 .frame_style_9 {
 border: 1.2em double #edb742 !important; 
 /* Safari and Chrome */
--webkit-border-image-source: url(assets/images/frames/full-frame-max9.png) !important; 
+-webkit-border-image-source: url(../images/frames/full-frame-max9.png) !important; 
 -webkit-border-image-slice: 56 !important;  
 -webkit-border-image-width: 2.6em !important;  
 -webkit-border-image-outset: 0 !important;  
 -webkit-border-image-repeat: round !important;  
 
 /* Firefox */
--moz-border-image-source: url(assets/images/frames/full-frame-max9.png) !important;  
+-moz-border-image-source: url(../images/frames/full-frame-max9.png) !important;  
 -moz-border-image-slice: 56 !important; 
 -moz-border-image-width: 2.6em !important; 
 -moz-border-image-outset: 0 !important;  
 -moz-border-image-repeat: round !important; 
 
 /* Internet Explorer */
--ms-border-image-source: url(assets/images/frames/full-frame-max9.png) !important;  
+-ms-border-image-source: url(../images/frames/full-frame-max9.png) !important;  
 -ms-border-image-slice: 56 !important;  
 -ms-border-image-width: 2.6em !important;  
 -ms-border-image-outset: 0 !important;  
 -ms-border-image-repeat: round !important;  
 
 /* Opera */
--o-border-image-source: url(assets/images/frames/full-frame-max9.png) !important;  
+-o-border-image-source: url(../images/frames/full-frame-max9.png) !important;  
 -o-border-image-slice: 56 !important;  
 -o-border-image-width: 2.6em !important;  
 -o-border-image-outset: 0 !important;  
 -o-border-image-repeat: round !important;  
 
 /* CSS3 */
-border-image-source: url(assets/images/frames/full-frame-max9.png) !important; 
+border-image-source: url(../images/frames/full-frame-max9.png) !important; 
 border-image-slice: 56 !important; 
 border-image-width: 2.6em !important;  
 border-image-outset: 0 !important; 
@@ -344,35 +344,35 @@ border-image-repeat: round !important;
 .frame_style_10 {
 border: 1.2em double #edb742 !important; 
 /* Safari and Chrome */
--webkit-border-image-source: url(assets/images/frames/full-frame-max10.png) !important; 
+-webkit-border-image-source: url(../images/frames/full-frame-max10.png) !important; 
 -webkit-border-image-slice: 56 !important;  
 -webkit-border-image-width: 2.6em !important;  
 -webkit-border-image-outset: 0 !important;  
 -webkit-border-image-repeat: round !important;  
 
 /* Firefox */
--moz-border-image-source: url(assets/images/frames/full-frame-max10.png) !important;  
+-moz-border-image-source: url(../images/frames/full-frame-max10.png) !important;  
 -moz-border-image-slice: 56 !important; 
 -moz-border-image-width: 2.6em !important; 
 -moz-border-image-outset: 0 !important;  
 -moz-border-image-repeat: round !important; 
 
 /* Internet Explorer */
--ms-border-image-source: url(assets/images/frames/full-frame-max10.png) !important;  
+-ms-border-image-source: url(../images/frames/full-frame-max10.png) !important;  
 -ms-border-image-slice: 56 !important;  
 -ms-border-image-width: 2.6em !important;  
 -ms-border-image-outset: 0 !important;  
 -ms-border-image-repeat: round !important;  
 
 /* Opera */
--o-border-image-source: url(assets/images/frames/full-frame-max10.png) !important;  
+-o-border-image-source: url(../images/frames/full-frame-max10.png) !important;  
 -o-border-image-slice: 56 !important;  
 -o-border-image-width: 2.6em !important;  
 -o-border-image-outset: 0 !important;  
 -o-border-image-repeat: round !important;  
 
 /* CSS3 */
-border-image-source: url(assets/images/frames/full-frame-max10.png) !important; 
+border-image-source: url(../images/frames/full-frame-max10.png) !important; 
 border-image-slice: 56 !important; 
 border-image-width: 2.6em !important;  
 border-image-outset: 0 !important; 
@@ -381,35 +381,35 @@ border-image-repeat: round !important;
 .frame_style_11 {
 border: 1.2em double #edb742 !important; 
 /* Safari and Chrome */
--webkit-border-image-source: url(assets/images/frames/full-frame-max11.png) !important; 
+-webkit-border-image-source: url(../images/frames/full-frame-max11.png) !important; 
 -webkit-border-image-slice: 56 !important;  
 -webkit-border-image-width: 2.6em !important;  
 -webkit-border-image-outset: 0 !important;  
 -webkit-border-image-repeat: round !important;  
 
 /* Firefox */
--moz-border-image-source: url(assets/images/frames/full-frame-max11.png) !important;  
+-moz-border-image-source: url(../images/frames/full-frame-max11.png) !important;  
 -moz-border-image-slice: 56 !important; 
 -moz-border-image-width: 2.6em !important; 
 -moz-border-image-outset: 0 !important;  
 -moz-border-image-repeat: round !important; 
 
 /* Internet Explorer */
--ms-border-image-source: url(assets/images/frames/full-frame-max11.png) !important;  
+-ms-border-image-source: url(../images/frames/full-frame-max11.png) !important;  
 -ms-border-image-slice: 56 !important;  
 -ms-border-image-width: 2.6em !important;  
 -ms-border-image-outset: 0 !important;  
 -ms-border-image-repeat: round !important;  
 
 /* Opera */
--o-border-image-source: url(assets/images/frames/full-frame-max11.png) !important;  
+-o-border-image-source: url(../images/frames/full-frame-max11.png) !important;  
 -o-border-image-slice: 56 !important;  
 -o-border-image-width: 2.6em !important;  
 -o-border-image-outset: 0 !important;  
 -o-border-image-repeat: round !important;  
 
 /* CSS3 */
-border-image-source: url(assets/images/frames/full-frame-max11.png) !important; 
+border-image-source: url(../images/frames/full-frame-max11.png) !important; 
 border-image-slice: 56 !important; 
 border-image-width: 2.6em !important;  
 border-image-outset: 0 !important; 

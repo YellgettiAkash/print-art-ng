@@ -11,10 +11,76 @@ $photo_photo_steps =[
     ["id" => "frame", "name" => "Frame Photo", "subcategory" => [
         ["id" => "none", "name" => "none",   "categories" => []],
         ["id" => "classic", "name" => "classic", "categories" => [
-            ['id' => 'corner_1', 'name' => 'classic_1', 'price' => 10,],
-            ['id' => 'corner_2', 'name' => 'classic_2', 'price' => 15, ],
-            ['id' => 'corner_3', 'name' => 'classic_3', 'price' => 10, ],
-        ]],
+            [
+        'id' => 'assets/images/corner/corner_1.png',
+        'name' => 'frame1',
+        'price' => 10,
+        'class' => 'frame_style_1'
+      ],
+     [
+        'id' => 'assets/images/corner/corner_2.png',
+        'name' => 'frame2',
+        'price' => 15,
+        'class' => 'frame_style_2',
+      ],
+     [
+        'id' => 'assets/images/corner/corner_3.png',
+        'name' => 'frame3',
+        'price' => 10,
+        'class' => 'frame_style_3'
+      ],
+     [
+        'id' => 'assets/images/corner/corner_4.png',
+        'name' => 'frame1',
+        'price' => 10,
+        'class' => 'frame_style_4'
+      ],
+     [
+        'id' => 'assets/images/corner/corner_5.png',
+        'name' => 'frame2',
+        'price' => 15,
+        'class' => 'frame_style_5'
+      ],
+     [
+        'id' => 'assets/images/corner/corner_6.png',
+        'name' => 'frame3',
+        'price' => 10,
+        'class' => 'frame_style_6'
+      ],
+     [
+        'id' => 'assets/images/corner/corner_7.png',
+        'name' => 'frame1',
+        'price' => 10,
+        'class' => 'frame_style_7'
+      ],
+     [
+        'id' => 'assets/images/corner/corner_8.png',
+        'name' => 'frame2',
+        'price' => 15,
+        'class' => 'frame_style_9'
+      ],
+     [
+        'id' => 'assets/images/corner/corner_9.png',
+        'name' => 'frame3',
+        'price' => 10,
+        'class' => 'frame_style_10'
+      ],
+     [
+        'id' => 'assets/images/corner/corner_10.png',
+        'name' => 'frame1',
+        'price' => 10,
+      ],
+      [
+        'id' => 'assets/images/corner/corner_11.png',
+        'name' => 'frame2',
+        'price' => 15,
+      ],
+      [
+        'id' => 'assets/images/corner/corner_12.png',
+        'name' => 'frame3',
+        'price' => 10,
+      ]    
+       ] ],
         ["id" => "color", "name" => "color", "categories" => [
             ['id' => 'grey', 'name' => 'frame1', 'price' => 10, ],
             ['id' => 'red', 'name' => 'frame2', 'price' => 15, ],

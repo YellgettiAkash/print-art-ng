@@ -128,7 +128,9 @@ function printPriceService() {
              setHeightWidth(categories.height,categories.width);   
         }
         if (category == "frame" && subcategory != "none") {
-             setFrameCost(categories.price);   
+             setFrameCost(categories.price); 
+             setImageClasses(categories.class,scope); 
+
         }
         if (category == "mat" && subcategory == "color") {
              setHeightWidth(categories.height,categories.width);   
@@ -215,7 +217,9 @@ function printPriceService() {
     var getProductCost = function() {
         return _productCost;
     }
-
+    var setImageClasses = function(classes,scope){
+        scope.imageFrameClass = classes;
+    } 
     var setHeightWidth = function(height, width) {
         _width = width;
         _height = height;
@@ -267,6 +271,7 @@ function printPriceService() {
         setCategory: setCategory,
         setSubCategory: setSubCategory,
         setCategories: setCategories,
+        setImageClasses : setImageClasses,
 
         subcategoryShowHide: subcategoryShowHide,
 
