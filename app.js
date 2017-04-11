@@ -9,18 +9,13 @@ app.controller('home', function($scope, $http,printPriceService) {
 
     printPriceService.setProductCost(product_cost);
     
-    // $scope = {
-    //     tabs : '',   
-    //     product_cost : '',   
-    //     picture_cost : '',   
-    //     imageFrameClass : '',
-    //     paperCost : 0,
-    //     frameCost : 0,
-    //     matCost : 0
-    // };
+    
     $scope.productCost = printPriceService.getProductCost();
     $scope.pictureCost = printPriceService.getPictureCost();
-    
+    $scope.matCost = 0;
+    $scope.paperCost = 0;
+    $scope.frameCost = 0;
+
     printPriceService.setImageFrameClass('',$scope);
     printPriceService.setImageMatColorClass('',$scope);
     printPriceService.setImageMatHeightWidthClass('',$scope);
