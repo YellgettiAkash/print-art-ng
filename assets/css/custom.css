@@ -415,6 +415,47 @@ border-image-width: 2.6em !important;
 border-image-outset: 0 !important; 
 border-image-repeat: round !important;     
 }
+
+.frame_style_12 {
+border: 1.8em double #edb742 !important; 
+/* Safari and Chrome */
+-webkit-border-image-source: url(../images/frames/full-frame-max12.png) !important; 
+-webkit-border-image-slice: 56 !important;  
+-webkit-border-image-width: 1.9em !important;  
+-webkit-border-image-outset: 0 !important;  
+-webkit-border-image-repeat: round !important;  
+
+/* Firefox */
+-moz-border-image-source: url(../images/frames/full-frame-max12.png) !important;  
+-moz-border-image-slice: 56 !important; 
+-moz-border-image-width: 1.9em !important; 
+-moz-border-image-outset: 0 !important;  
+-moz-border-image-repeat: round !important; 
+
+/* Internet Explorer */
+-ms-border-image-source: url(../images/frames/full-frame-max12.png) !important;  
+-ms-border-image-slice: 56 !important;  
+-ms-border-image-width: 1.9em !important;  
+-ms-border-image-outset: 0 !important;  
+-ms-border-image-repeat: round !important;  
+
+/* Opera */
+-o-border-image-source: url(../images/frames/full-frame-max12.png) !important;  
+-o-border-image-slice: 56 !important;  
+-o-border-image-width: 1.9em !important;  
+-o-border-image-outset: 0 !important;  
+-o-border-image-repeat: round !important;  
+
+/* CSS3 */
+border-image-source: url(../images/frames/full-frame-max12.png) !important; 
+border-image-slice: 56 !important; 
+border-image-width: 1.9em !important;  
+border-image-outset: 0 !important; 
+border-image-repeat: round !important;  
+    
+    
+}
+
 /*======Color Frame ===================*/
 
 .black{
