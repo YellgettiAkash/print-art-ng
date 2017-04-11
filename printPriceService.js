@@ -145,7 +145,6 @@ function printPriceService() {
         }            
         if (category == "mat" && subcategory == "color") {
             setImageMatColorClass(categories.class,scope);   
-            setHeightWidth(categories.height,categories.width);   
         }
 
         scope.paperCost =  getPaperCost();
@@ -207,8 +206,6 @@ function printPriceService() {
 
         var subcategories = subcategory.subcategories;
         if(subcategories != undefined){
-            console.log(subcategories);
-            
             var id = 0;
             for (var i = 0; i < subcategories.length; i++) {
                 if (subcategories[i].id == _process[_key]._subcategories) {
@@ -234,9 +231,20 @@ function printPriceService() {
     var setSubCategories = function(subcategories, scope) {
        
         scope._subcategories = scope._subcategoriesPanel = _subcategories = subcategories.id;
+        if (_process[_key]._subcategories != _subcategories) {
+            _process[_key]._subcategories = _subcategories;
+        };
+
+        if (_category == 'mat') {
+            setMatHeightWidth(subcategories.height,subcategories.width)
+            setImageMatHeightWidthClass(_subcategories,scope);  
+
+            scope.paperCost =  getPaperCost();
+            scope.matCost =  getMatCost();
+            scope.frameCost =  getFrameCost();  
+        }
         
-        setImageMatHeightWidthClass(subcategories.id,scope);
-        // console.log(_process);
+        
     }
 
     var subcategoryShowHide = function(categoryId, scope) {

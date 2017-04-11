@@ -27,11 +27,11 @@
                <div class="col-sm-12">
                   <div class="panel panel-default">
                      <div class="panel-body">
-                        <button class="btn btn-warning ">Product Cost : {{ productCost }}  </button>
-                        <button class="btn btn-warning ">Picture Cost : {{ pictureCost }}  </button>
-                        <button class="btn btn-warning ">Paper Cost : {{ paperCost }}  </button>
-                        <button class="btn btn-warning ">Mat Cost : {{ matCost }}  </button>
-                        <button class="btn btn-warning ">Frame Cost : {{ frameCost }}  </button>
+                        <button class="btn btn-sm btn-warning ">Product Cost : {{ productCost }}  </button>
+                        <button class="btn btn-sm btn-warning ">Picture Cost : {{ pictureCost }}  </button>
+                        <button class="btn btn-sm btn-warning ">Paper Cost : {{ paperCost }}  </button>
+                        <button class="btn btn-sm btn-warning ">Mat Cost : {{ matCost }}  </button>
+                        <button class="btn btn-sm btn-warning ">Frame Cost : {{ frameCost }}  </button>
                      </div>
                   </div>
                </div>
