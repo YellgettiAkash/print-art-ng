@@ -19,7 +19,7 @@
             <div class="col-sm-4">
                <div class="panel panel-default">
                   <div class="panel-body">
-                     <img src="assets/images/sample.jpg" class="img-responsive {{ imageFrameClass }} ">
+                     <img src="assets/images/sample.jpg" class="img-responsive {{ imageFrameClass }} {{ imageMatColorClass }} {{ imageMatHeightWidthClass }}">
                   </div>
                </div>
             </div>
@@ -38,7 +38,6 @@
                <div class="col-sm-12">
                   <div class="panel panel-default">
                      <div class="panel-body">
-
                         <!-- Tabs Start Header -->
                         <div >
                            <button class="btn btn-space "
@@ -47,12 +46,9 @@
                               ng-class="{'btn-primary' : tab.id == _tab,'tab-btn btn-default' : tab.id != _tab }">{{ tab.name }}</button>
                         </div>
                         <!-- Tabs End Header -->
-                        
                         <!-- Tabs Start Content -->
                         <div ng-repeat="tab in tabs">
                            <div ng-if="tab.id == _tabPanel">
-
-
 
                               <!-- Category Start Header -->
                               <!-- <div class="print-header">
@@ -64,14 +60,12 @@
                                     ng-class="{'btn-primary' : category.id == _category,'btn-default' : category.id != _category }">
                                  {{ category.name }}
                                  </button>
-                              </div> -->
+                                 </div> -->
                               <!-- Category End Header -->
                               
                               <!-- Category Start Content -->
                               <div ng-repeat="category in tab.category" >
                                  <div ng-if="category.id == _categoryPanel "  >
-                                    
-                                    
                                     <!-- SubCategory Start Header -->
                                     <div class="print-header" ng-hide="_oneCategory">
                                        <h4>Category</h4>
@@ -84,72 +78,60 @@
                                        </button>  
                                     </div>
                                     <!-- SubCategory End Header -->
-                                    
                                     <!-- SubCategory Start Content -->
                                     <div ng-repeat="subcategory in category.subcategory" >
                                        <div ng-if="subcategory.id == _subcategoryPanel && _subcategoryPanel != 'none'" >
-                                          
-
                                           <!-- Options Start Header -->
                                           <div class="print-header">
                                              <h4>Options</h4>
                                              <hr>
-
-                                               
-
-                                                <div  ng-if="_categoryPanel == 'frame' && _subcategoryPanel == 'classic'" >
-                                                   
-                                                      <img ng-src="{{ categories.id }}"
+                                             <div  ng-if="_categoryPanel == 'frame' || _categoryPanel == 'mat'" >
+                                                <div ng-if="_subcategoryPanel == 'classic'">
+                                                   <img ng-src="{{ categories.id }}"
                                                       ng-repeat="categories in subcategory.categories"
                                                       ng-class="{'borders' : categories.id == _categories }"
                                                       ng-click="selectedCategories(categories)" 
                                                       class="img-frame-size">
-
-                                                      <div class="print-header">
-                                                         <h4>Options-Category </h4>
-                                                         <hr>
-                                                         <button class="btn btn-space"
-                                                         ng-repeat="subcategories in category.subcategories"
-                                                         ng-click="selectedSubCategories(subcategories)" 
-                                                         ng-class="{'btn-primary' : subcategories.id == _subcategories,'btn-default' : subcategories.id != _subcategories }">
-                                                         {{ subcategories.name }} 
-                                                         </button>
-                                                      </div>
-                                                </div> 
-
-                                                <div ng-if="_categoryPanel == 'frame' && _subcategoryPanel == 'color' || _categoryPanel == 'mat' && _subcategoryPanel == 'color' ">
+                                                </div>
+                                                <div ng-if="_subcategoryPanel == 'color'">
                                                    <div 
                                                       ng-repeat="categories in subcategory.categories"
                                                       ng-click="selectedCategories(categories)" 
                                                       ng-class="{'borders' : categories.id == _categories }"
                                                       class="img-frame-size {{ categories.id }}">
-                                                  <p>{{ categories.name }} </p> 
-                                                   </div>   
+                                                      <p>{{ categories.name }} </p>
+                                                   </div>
                                                 </div>
-
-                                                 <div ng-if="_categoryPanel != 'frame' && _categoryPanel != 'mat' && _subcategoryPanel != 'frame'">
+                                                <div class="print-header">
+                                                   <h4>Options-Category </h4>
+                                                   <hr>
                                                    <button class="btn btn-space"
-                                                      ng-repeat="categories in subcategory.categories"
-                                                      ng-click="selectedCategories(categories)" 
-                                                      ng-class="{'btn-primary' : categories.id == _categories,'btn-default' : categories.id != _categories }">
-                                                   {{ categories.name }} 
-                                                   </button>   
+                                                      ng-repeat="subcategories in subcategory.subcategories"
+                                                      ng-click="selectedSubCategories(subcategories)" 
+                                                      ng-class="{'btn-primary' : subcategories.id == _subcategories,'btn-default' : subcategories.id != _subcategories }">
+                                                   {{ subcategories.name }} 
+                                                   </button>
                                                 </div>
-
+                                             </div>
+                                             <div ng-if="_categoryPanel != 'frame' && _categoryPanel != 'mat' && _subcategoryPanel != 'frame'">
+                                                <button class="btn btn-space"
+                                                   ng-repeat="categories in subcategory.categories"
+                                                   ng-click="selectedCategories(categories)" 
+                                                   ng-class="{'btn-primary' : categories.id == _categories,'btn-default' : categories.id != _categories }">
+                                                {{ categories.name }} 
+                                                </button>   
+                                             </div>
                                           </div>
                                           <!-- Options End Header -->
-
                                        </div>
                                     </div>
                                     <!-- SubCategory End Content -->
-
                                  </div>
                               </div>
                               <!-- Category Start Content -->
                               <div class="print-header">
-                               <hr>
+                                 <hr>
                                  <div class="row">
-
                                     <div class="col-sm-2 text-left">
                                        <button ng-click="previous()" class="btn tab-btn btn-default">previous</button>    
                                     </div>

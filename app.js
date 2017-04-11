@@ -20,7 +20,11 @@ app.controller('home', function($scope, $http,printPriceService) {
     // };
     $scope.productCost = printPriceService.getProductCost();
     $scope.pictureCost = printPriceService.getPictureCost();
-    $scope.imageFrameClass = printPriceService.setImageClasses('frame_style_3',$scope);
+    
+    printPriceService.setImageFrameClass('',$scope);
+    printPriceService.setImageMatColorClass('',$scope);
+    printPriceService.setImageMatHeightWidthClass('',$scope);
+    
     //Getting the Tabs
     var req = $http.get('category.php');
     req.then(function(data) {
@@ -48,6 +52,9 @@ app.controller('home', function($scope, $http,printPriceService) {
         printPriceService.setCategories(categories,$scope);
     }
 
+    $scope.selectedSubCategories = function (subcategories) {
+        printPriceService.setSubCategories(subcategories,$scope);
+    }
     $scope.next = function() {
         printPriceService.getNext($scope);
     }

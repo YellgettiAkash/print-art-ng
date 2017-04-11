@@ -27,6 +27,7 @@ function printPriceService() {
     var _category = "";
     var _subcategory = "";
     var _categories = "";
+    var _subcategories = "";
 
 
     var setTabs = function(tabs) {
@@ -88,6 +89,10 @@ function printPriceService() {
             _process[i]._category = category[i].id;
             var subcategory = category[i].subcategory;
 
+            var subcategories = category[i].subcategories;
+
+
+
             for (var j = 0; j < subcategory.length; j++) {
                 if (j == 0) {
                     _process[i]._subcategory = subcategory[j].id;
@@ -105,9 +110,16 @@ function printPriceService() {
                         }
                     }
                 }
-
-
             }
+            
+            // if(subcategories != undefined){
+            //     for (var z = 0; z < subcategories.length; z++) {
+            //         if(z==0){
+            //             _process[i]._subcategories = subcategories[z].id;
+            //         }
+            //     }    
+            // }
+            
 
         
         }
@@ -129,11 +141,11 @@ function printPriceService() {
         }
         if (category == "frame" && subcategory != "none") {
              setFrameCost(categories.price); 
-             console.log(categories.id);
-             setImageClasses(categories.class,scope); 
+             setImageFrameClass(categories.class,scope); 
         }            
         if (category == "mat" && subcategory == "color") {
-             setHeightWidth(categories.height,categories.width);   
+            setImageMatColorClass(categories.class,scope);   
+            setHeightWidth(categories.height,categories.width);   
         }
 
         scope.paperCost =  getPaperCost();
@@ -155,8 +167,11 @@ function printPriceService() {
                 id = i;
             }
         };
-
         setSubCategory(subcategory[id], scope);
+
+       
+
+        
 
     }
 
@@ -175,19 +190,52 @@ function printPriceService() {
                 id = i;
             }
         };
+
         if (_subcategory == "none") {
             scope._categories = scope._categoriesPanel = _categories = categories.id;
+            if (_category == "frame") {
+                setImageFrameClass('',scope);
+            }
+            if (_category == "mat") {
+                setImageMatColorClass('',scope);
+                setImageMatHeightWidthClass('',scope);
+            }
+            
         } else {
             setCategories(categories[id], scope);
         };
+
+        var subcategories = subcategory.subcategories;
+        if(subcategories != undefined){
+            console.log(subcategories);
+            
+            var id = 0;
+            for (var i = 0; i < subcategories.length; i++) {
+                if (subcategories[i].id == _process[_key]._subcategories) {
+                    id = i;
+                }
+            };
+
+            setSubCategories(subcategories[id], scope);   
+        }
     }
 
     var setCategories = function(categories, scope) {
+       
+
         scope._categories = scope._categoriesPanel = _categories = categories.id;
         if (_process[_key]._categories != _categories) {
             _process[_key]._categories = _categories;
         };
+
         setGlobalValues(_category,_subcategory,categories,scope);
+    }
+
+    var setSubCategories = function(subcategories, scope) {
+       
+        scope._subcategories = scope._subcategoriesPanel = _subcategories = subcategories.id;
+        
+        setImageMatHeightWidthClass(subcategories.id,scope);
         // console.log(_process);
     }
 
@@ -217,9 +265,19 @@ function printPriceService() {
     var getProductCost = function() {
         return _productCost;
     }
-    var setImageClasses = function(classes,scope){
+    var setImageFrameClass = function(classes,scope){
         scope.imageFrameClass = classes;
     } 
+    
+    var setImageMatColorClass = function(classes,scope){
+        scope.imageMatColorClass = classes;
+    }
+
+    var setImageMatHeightWidthClass = function(classes,scope){
+        scope.imageMatHeightWidthClass = classes;
+    }
+
+    
     var setHeightWidth = function(height, width) {
         _width = width;
         _height = height;
@@ -271,7 +329,13 @@ function printPriceService() {
         setCategory: setCategory,
         setSubCategory: setSubCategory,
         setCategories: setCategories,
-        setImageClasses : setImageClasses,
+        setSubCategories : setSubCategories,
+       
+
+        setImageFrameClass : setImageFrameClass,
+        setImageMatColorClass : setImageMatColorClass,
+        setImageMatHeightWidthClass : setImageMatHeightWidthClass ,
+
 
         subcategoryShowHide: subcategoryShowHide,
 

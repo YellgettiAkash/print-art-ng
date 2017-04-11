@@ -521,3 +521,17 @@ border-image-repeat: round !important;
 .white{
 	background-color:white;
 }
+/*================Mat Padding============ */
+
+.mat_1_1{
+	padding: 10px;
+}
+.mat_3_3{
+	padding: 20px;
+}
+.mat_5_5{
+	padding: 25px;
+}
+.mat_7_7{
+	padding: 30px;
+}
