@@ -91,9 +91,22 @@ $photo_photo_steps =[
       ]    
        ] ],
         ["id" => "color", "name" => "color", "categories" => [
-            ['id' => 'grey', 'name' => 'frame1', 'price' => 10, ],
-            ['id' => 'red', 'name' => 'frame2', 'price' => 15, ],
-            ['id' => 'blue', 'name' => 'frame3', 'price' => 10, ]
+            
+            ['id' => 'black','class' => 'black_frame', 'name' => 'black', 'price' => 10, ],
+            ['id' => 'blue','class' => 'blue_frame', 'name' => 'blue', 'price' => 15, ],
+            ['id' => 'dark_brown','class' => 'dark_brown_frame', 'name' => 'dark_brown', 'price' => 10, ],
+            ['id' => 'gold','class' => 'gold_frame', 'name' => 'frame3', 'gold' => 10, ],
+
+            ['id' => 'green','class' => 'green_frame', 'name' => 'green', 'price' => 10, ],
+            ['id' => 'grey','class' => 'grey_frame', 'name' => 'grey', 'price' => 15, ],
+            ['id' => 'honey_brown','class' => 'honey_brown_frame', 'name' => 'honey_brown', 'price' => 10, ],
+            ['id' => 'ivory','class' => 'ivory_frame', 'name' => 'ivory', 'price' => 10, ],
+
+            ['id' => 'purple','class' => 'purple_frame', 'name' => 'purple', 'price' => 10, ],
+            ['id' => 'red','class' => 'red_frame', 'name' => 'red', 'price' => 15, ],
+            ['id' => 'silver','class' => 'silver_frame', 'name' => 'silver', 'price' => 10, ],
+            ['id' => 'white','class' => 'white_frame', 'name' => 'white', 'price' => 10, ]
+
           ]
         ],
     ], ],
@@ -108,9 +121,21 @@ $photo_photo_steps =[
     ["id" => "mat", "name" => "Mat", "subcategory" => [
         ["id" => "none", "name" => "none", "categories" => []],
         ["id" => "color", "name" => "color",  "categories" => [
-            ['id' => 'grey', 'name' => 'frame1', 'price' => 10,  ],
-            ['id' => 'red', 'name' => 'frame2', 'price' => 15, ],
-            ['id' => 'blue', 'name' => 'frame3', 'price' => 10, ]
+            ['id' => 'black','class' => 'black_mat', 'name' => 'black', 'price' => 10, ],
+            ['id' => 'blue','class' => 'blue_mat', 'name' => 'blue', 'price' => 15, ],
+            ['id' => 'dark_brown','class' => 'dark_brown_mat', 'name' => 'dark_brown', 'price' => 10, ],
+            ['id' => 'gold','class' => 'gold_mat', 'name' => 'frame3', 'gold' => 10, ],
+
+            ['id' => 'green','class' => 'green_mat', 'name' => 'green', 'price' => 10, ],
+            ['id' => 'grey','class' => 'grey_mat', 'name' => 'grey', 'price' => 15, ],
+            ['id' => 'honey_brown','class' => 'honey_brown_mat', 'name' => 'honey_brown', 'price' => 10, ],
+            ['id' => 'ivory','class' => 'ivory_mat', 'name' => 'ivory', 'price' => 10, ],
+
+            ['id' => 'purple','class' => 'purple_mat', 'name' => 'purple', 'price' => 10, ],
+            ['id' => 'red','class' => 'red_mat', 'name' => 'red', 'price' => 15, ],
+            ['id' => 'silver','class' => 'silver_mat', 'name' => 'silver', 'price' => 10, ],
+            ['id' => 'white','class' => 'white_mat', 'name' => 'white', 'price' => 10, ]
+
         ]],
     ], ]
 ];

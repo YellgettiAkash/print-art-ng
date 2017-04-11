@@ -82,8 +82,8 @@ function printPriceService() {
                 _category: '',
                 _subcategory: '',
                 _categories: '',
-                _mat_height : 0,
-                _mat_width : 0,
+                _subcategories: '',
+                
             };
             _process[i]._category = category[i].id;
             var subcategory = category[i].subcategory;
@@ -129,6 +129,7 @@ function printPriceService() {
         }
         if (category == "frame" && subcategory != "none") {
              setFrameCost(categories.price); 
+             console.log(categories.id);
              setImageClasses(categories.class,scope); 
         }            
         if (category == "mat" && subcategory == "color") {

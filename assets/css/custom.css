@@ -415,3 +415,109 @@ border-image-width: 2.6em !important;
 border-image-outset: 0 !important; 
 border-image-repeat: round !important;     
 }
+/*======Color Frame ===================*/
+
+.black{
+	background-color: black;
+}
+.black_frame{
+	border:15px solid black;
+}
+.black_mat{
+	background-color: black;	
+}
+.blue{
+	background-color: blue;
+}
+.blue_frame{
+	border:15px solid blue;
+}
+.blue_mat{
+	background-color: blue;	
+}
+.dark_brown{
+	background-color:#4C2B00;
+}
+.dark_brown_frame{
+	border:15px solid #4C2B00;
+}
+.dark_brown_mat{
+	background-color:#4C2B00;	
+}
+.gold{
+	background-color: gold;
+}
+.gold_frame{
+	border:15px solid gold;
+}
+.gold_mat{
+	background-color: gold;	
+}
+/*=================*/
+.green{
+	background-color: green;
+}
+.green_frame{
+	border:15px solid green;
+}
+.green_mat{
+	background-color: green;	
+}
+.grey{
+	background-color: grey;
+}
+.grey_frame{
+	border:15px solid grey;
+}
+.grey_mat{
+	background-color: grey;	
+}
+.honey_brown{
+	background:#FBA32F;
+}
+.honey_brown_frame{
+	border:15px solid #FBA32F;
+}
+.honey_brown_mat{
+	background:#FBA32F;	
+}
+.ivory{
+	background-color:ivory;
+}
+.ivory_frame{
+	border:15px solid ivory;
+}
+.ivory_mat{
+	background-color:ivory;	
+}
+/*=================*/
+.purple{
+	background-color:purple;
+}
+.purple_frame{
+	border:15px solid purple;
+}
+.purple_mat{
+	background-color:purple;	
+}
+.red{
+	background-color:red;
+}
+.red_frame{
+	border:15px solid red;
+}
+.red_mat{
+	background-color:red;	
+}
+.silver{
+	background-color:silver;
+}
+.silver_frame{
+	border:15px solid silver;
+}
+.silver_mat{
+	background-color:silver;	
+}
+.white{
+	background-color:white;
+}

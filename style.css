@@ -19,19 +19,20 @@
     margin-top: 10px;
     display: inline-block;
 }
+.imageColorFrameClass{
+    border: 5px solid #000;
+}
+
 hr {
 	margin: 0px;
 	padding-bottom: 10px;
 	border-top: 3px solid #ff5e25;
 }
 .borders{
-
-    border :5px solid #000;
+    border :5px solid #ff5e25;
 }
 .grey{
-    
   background: #eee;
-  border :5px solid #eee;
 }
 .red{
   background: red;
