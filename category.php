@@ -13,22 +13,23 @@ $types_of_print = [
 		"name" => "Canvas Photo",
 		"category" => $canvas_photo
 	],
-	"acrylic_photo" => [
-		"id" => "acrylic_photo",
-		"name" => "Acrylic ",
-		"category" =>$acrylic_photo
+	"canvas_min_photo" => [
+		"id" => "canvas_min_photo",
+		"name" => "Canvas Mini ",
+		"category" => $canvas_min_photo
 	],
 	
+
 	"mdf_photo" => [
 		"id" => "mdf_photo",
 		"name" => "MDF Photo",
 		"category" => $mdf_photo_steps
 	],
 	
-	"canvas_min_photo" => [
-		"id" => "canvas_min_photo",
-		"name" => "Canvas Mini ",
-		"category" => $canvas_min_photo
+	"acrylic_photo" => [
+		"id" => "acrylic_photo",
+		"name" => "Acrylic ",
+		"category" =>$acrylic_photo
 	],
 	
 	"acrylic_block_photo" => [
