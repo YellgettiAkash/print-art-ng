@@ -39,6 +39,13 @@ function printPriceService() {
     }
 
     var setTab = function(tab, scope, val) {
+        
+        setImageFrameClass('',scope);
+        setImageMatColorClass('',scope);
+        setImageMatHeightWidthClass('',scope);
+        setMatHeightWidth(0,0);
+        reCalculate(scope);
+
         scope._tab = scope._tabPanel = _tab = tab.id;
         var category = _tabCategory = tab.category;
         _process = [];
