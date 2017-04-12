@@ -61,6 +61,19 @@
                                  {{ category.name }}
                                  </button>
                                  </div> -->
+                                 <!-- <div class="col-sm-12 "> -->
+                                    <div class="print-header panel panel-default">
+                                       <div class="panel-body text-center">
+                                          <div class="steps" ng-repeat="(key,category) in tab.category" ng-click="selectedCategory(key,category)" >
+                                             <div class="step-title">{{ category.name }}</div>
+                                             <div class="step-content">
+                                                <span class="step-icon" ng-class="{'step-icon-selected' : category.id == _category,'step-icon' : category.id != _category }"></span>
+                                             </div>
+                                          </div> 
+                                       </div>
+                                    </div>
+                                 <!-- </div> -->
+
                               <!-- Category End Header -->
                               
                               <!-- Category Start Content -->
@@ -99,7 +112,7 @@
                                                       ng-click="selectedCategories(categories)" 
                                                       ng-class="{'borders' : categories.id == _categories }"
                                                       class="img-frame-size {{ categories.id }}">
-                                                      <p>{{ categories.name }} </p>
+                                                      <!-- <p>{{ categories.name }} </p> -->
                                                    </div>
                                                 </div>
                                                 <div class="print-header">
@@ -135,15 +148,8 @@
                                     <div class="col-sm-2 text-left">
                                        <button ng-click="previous()" class="btn tab-btn btn-default">previous</button>    
                                     </div>
-                                    <div class="col-sm-8 text-center">
-                                       <div class="steps" ng-repeat="(key,category) in tab.category" ng-click="selectedCategory(key,category)" >
-                                          <div class="step-title">{{ category.name }}</div>
-                                          <div class="step-content">
-                                             <span class="step-icon" ng-class="{'step-icon-selected' : category.id == _category,'step-icon' : category.id != _category }"></span>
-                                          </div>
-                                       </div>
-                                    </div>
-                                    <div class="col-sm-2 text-right">
+                                    
+                                    <div class="col-sm-2 col-sm-offset-8 text-right">
                                        <button ng-click="next()" class="btn btn-primary ">next</button>    
                                     </div>
                                  </div>
