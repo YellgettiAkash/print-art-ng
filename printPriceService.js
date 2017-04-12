@@ -38,41 +38,6 @@ function printPriceService() {
         return _tabs;
     }
 
-    var setDefault = function(tabs, scope) {
-
-        // angular.forEach(tabs,function(values,keys){
-        //     // console.log(values);
-        //     if(values.active != undefined && values.active == true){
-        //         scope._tab = scope._tabPanel = _tab = values.id;
-        //     }
-        //     angular.forEach(values.category,function(value,key){
-        //         if(value.active != undefined && values.active == true){
-        //             scope._category = scope._categoryPanel = _category = value.id;   
-        //         }
-        //         angular.forEach(value.subcategory,function(v,k){
-        //             if(v.active != undefined && v.active == true){
-        //                 scope._subcategory = scope._subcategoryPanel = _subcategory = v.id;   
-        //             }
-
-        //             angular.forEach(v.categories,function(va,ke){
-        //                 if(va.active != undefined && va.active == true){
-        //                     scope._categories = scope._categoriesPanel = _categories = va.id;   
-        //                 }  
-        //             });
-        //         });
-        //     });
-        // });
-    }
-
-    var setDefaultTab = function(tabs, scope, val) {
-        angular.forEach(tabs, function(values, keys) {
-            if (values.active != undefined && values.active == true || values.id == val) {
-                scope._tab = scope._tabPanel = _tab = values.id;
-                setCategory(values.category, scope);
-            }
-        });
-    }
-
     var setTab = function(tab, scope, val) {
         scope._tab = scope._tabPanel = _tab = tab.id;
         var category = _tabCategory = tab.category;
@@ -90,8 +55,6 @@ function printPriceService() {
             var subcategory = category[i].subcategory;
 
             var subcategories = category[i].subcategories;
-
-
 
             for (var j = 0; j < subcategory.length; j++) {
                 if (j == 0) {
@@ -111,23 +74,8 @@ function printPriceService() {
                     }
                 }
             }
-            
-            // if(subcategories != undefined){
-            //     for (var z = 0; z < subcategories.length; z++) {
-            //         if(z==0){
-            //             _process[i]._subcategories = subcategories[z].id;
-            //         }
-            //     }    
-            // }
-            
-
-        
         }
         
-        
-       
-        
-        console.log(_process);
         var id = 0;
         setCategory(id, category[id], scope);
     }
@@ -143,7 +91,7 @@ function printPriceService() {
              setFrameCost(categories.price); 
              setImageFrameClass(categories.class,scope); 
         }            
-        if (category == "mat" && subcategory == "color") {
+        if (category == "mat" && (subcategory == "color" || subcategory == "archivable" || subcategory == "regular" )) {
             setImageMatColorClass(categories.class,scope);   
         }
 
@@ -347,12 +295,8 @@ function printPriceService() {
         setImageMatColorClass : setImageMatColorClass,
         setImageMatHeightWidthClass : setImageMatHeightWidthClass ,
 
-
         subcategoryShowHide: subcategoryShowHide,
 
-        setDefault: setDefault,
-        setDefaultTab: setDefaultTab,
-        
         setHeightWidth: setHeightWidth,
         setMatHeightWidth : setMatHeightWidth,
 

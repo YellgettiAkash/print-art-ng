@@ -59,7 +59,7 @@ $photo_photo_steps =$photo_photo_steps = [
   ], ],
   ["id" => "mat", "name" => "Mat", "subcategory" => [
     ["id" => "none", "name" => "none", "categories" => []],
-    ["id" => "color", "name" => "color", "categories" => [
+    ["id" => "archivable", "name" => "Archivable", "categories" => [
       ['id' => 'black', 'class' => 'black_mat', 'name' => 'black', 'price' => 10, ],
       ['id' => 'blue', 'class' => 'blue_mat', 'name' => 'blue', 'price' => 15, ],
       ['id' => 'dark_brown', 'class' => 'dark_brown_mat', 'name' => 'dark_brown', 'price' => 10, ],
@@ -80,7 +80,34 @@ $photo_photo_steps =$photo_photo_steps = [
     ['name' => '7"x7"', 'id' => 'mat_7_7', 'height' => 7, 'width' => 7, 'price' => 7, ],
   ],
     ],
-  ], ]
+    ["id" => "regular", "name" => "Regular", "categories" => [
+      ['id' => 'black', 'class' => 'black_mat', 'name' => 'black', 'price' => 10, ],
+      ['id' => 'blue', 'class' => 'blue_mat', 'name' => 'blue', 'price' => 15, ],
+      ['id' => 'dark_brown', 'class' => 'dark_brown_mat', 'name' => 'dark_brown', 'price' => 10, ],
+      ['id' => 'gold', 'class' => 'gold_mat', 'name' => 'frame3', 'gold' => 10, ],
+      ['id' => 'green', 'class' => 'green_mat', 'name' => 'green', 'price' => 10, ],
+      ['id' => 'grey', 'class' => 'grey_mat', 'name' => 'grey', 'price' => 15, ],
+      ['id' => 'honey_brown', 'class' => 'honey_brown_mat', 'name' => 'honey_brown', 'price' => 10, ],
+      ['id' => 'ivory', 'class' => 'ivory_mat', 'name' => 'ivory', 'price' => 10, ],
+      ['id' => 'purple', 'class' => 'purple_mat', 'name' => 'purple', 'price' => 10, ],
+      ['id' => 'red', 'class' => 'red_mat', 'name' => 'red', 'price' => 15, ],
+      ['id' => 'silver', 'class' => 'silver_mat', 'name' => 'silver', 'price' => 10, ],
+      ['id' => 'white', 'class' => 'white_mat', 'name' => 'white', 'price' => 10, ]
+    ],
+     "subcategories" => [
+    ['name' => '1"x1"', 'id' => 'mat_1_1', 'height' => 1, 'width' => 1, 'price' => 2, ],
+    ['name' => '3"x3"', 'id' => 'mat_3_3', 'height' => 3, 'width' => 3, 'price' => 3, ],
+    ['name' => '5"x5"', 'id' => 'mat_5_5', 'height' => 5, 'width' => 5, 'price' => 5, ],
+    ['name' => '7"x7"', 'id' => 'mat_7_7', 'height' => 7, 'width' => 7, 'price' => 7, ],
+  ],
+    ],
+
+
+  ],
+
+
+
+   ]
 ];
 $mdf_photo_steps = [
   ["id" => "paper_type", "name" => "Paper Type ", "subcategory" => [

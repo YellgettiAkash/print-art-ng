@@ -106,7 +106,7 @@
                                                       ng-click="selectedCategories(categories)" 
                                                       class="img-frame-size">
                                                 </div>
-                                                <div ng-if="_subcategoryPanel == 'color'">
+                                                <div ng-if="_subcategoryPanel == 'color' || _subcategoryPanel == 'archivable'|| _subcategoryPanel == 'regular'">
                                                    <div 
                                                       ng-repeat="categories in subcategory.categories"
                                                       ng-click="selectedCategories(categories)" 
