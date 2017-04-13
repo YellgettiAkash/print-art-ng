@@ -12,9 +12,7 @@ app.controller('home', function($scope, $http,printPriceService) {
     
     $scope.productCost = printPriceService.getProductCost();
     $scope.pictureCost = printPriceService.getPictureCost();
-    $scope.matCost = 0;
-    $scope.paperCost = 0;
-    $scope.frameCost = 0;
+    printPriceService.resetCosts($scope);
 
     printPriceService.setImageFrameClass('',$scope);
     printPriceService.setImageMatColorClass('',$scope);
