@@ -216,6 +216,7 @@ function printPriceService() {
         scope.paperCost =  getPaperCost();
         scope.paperTypeCost =  getPaperTypeCost();
         scope.canvasTypeCost =  getCanvasTypeCost();
+        scope.wrapCost =  getWrapCost();
         scope.matCost =  getMatCost();
         scope.frameCost =  getFrameCost();  
     }
@@ -226,7 +227,7 @@ function printPriceService() {
         scope.matCost = 0;
         scope.paperTypeCost = 0;
         scope.canvasTypeCost =0;
-        scope.wrapCost =0;
+        scope.wrapCost = 0;
     }
 
     var subcategoryShowHide = function(categoryId, scope) {
@@ -282,7 +283,7 @@ function printPriceService() {
     }
 
     var setPaperCost = function(paperCost) {
-        console.log(paperCost);
+        // console.log(paperCost);
         _paperCost = paperCost;
     }
 

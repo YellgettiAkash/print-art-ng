@@ -159,7 +159,7 @@ $canvas_photo = [
   ], ],
   ["id" => "wrap", "name" => "Wrap ", "subcategory" => [
     ["id" => "information", "name" => "information", "categories" => [
-      ["id" => "roll", "name" => "Roll", "price" => 1],
+      ["id" => "roll", "name" => "Roll", "price" => 0],
       ["id" => "black", "name" => "Black", "price" => 2],
       ["id" => "gallery", "name" => "Gallery", "price" => 3],
       ["id" => "white", "name" => "White", "price" => 4],
