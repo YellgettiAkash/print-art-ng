@@ -24,20 +24,7 @@
                </div>
             </div>
             <div class="col-sm-8">
-               <div class="col-sm-12">
-                  <div class="panel panel-default">
-                     <div class="panel-body">
-                        <button class="btn btn-sm btn-warning ">Product Cost : {{ productCost }}  </button>
-                        <button class="btn btn-sm btn-warning ">Picture Cost : {{ pictureCost }}  </button>
-                        <button class="btn btn-sm btn-warning ">{{ _tab }} Cost : {{ paperCost }}  </button>
-                        <button class="btn btn-sm btn-warning ">Paper Type Cost : {{ paperTypeCost }}  </button>
-                        <button class="btn btn-sm btn-warning ">Canvas Type Cost : {{ canvasTypeCost }}  </button>
-                        <button class="btn btn-sm btn-warning ">Mat Cost : {{ matCost }}  </button>
-                        <button class="btn btn-sm btn-warning ">Frame Cost : {{ frameCost }}  </button>
-                        <button class="btn btn-sm btn-warning ">Wrap Cost : {{ wrapCost }}  </button>
-                     </div>
-                  </div>
-               </div>
+               
                <div class="col-sm-12">
                   <div class="panel panel-default">
                      <div class="panel-body">

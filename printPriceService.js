@@ -41,6 +41,10 @@ function printPriceService() {
         return _tabs;
     }
 
+    var getFormalae=function() {
+        
+    }
+
     var setTab = function(tab, scope, val) {
         
         setImageFrameClass('',scope);
@@ -56,6 +60,8 @@ function printPriceService() {
 
         var category = _tabCategory = tab.category;
         _process = [];
+        _process.variables = tab.variables; 
+
         for (var i = 0; i < category.length; i++) {
             // console.log(category[i]);
             _process[i] = {
@@ -192,7 +198,7 @@ function printPriceService() {
         if (_process[_key]._categories != _categories) {
             _process[_key]._categories = _categories;
         };
-
+        console.log(_process);
         setGlobalValues(_category,_subcategory,categories,scope);
     }
 
