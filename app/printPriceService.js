@@ -42,8 +42,41 @@ function printPriceService() {
         return _tabs;
     }
 
-    var getFormalae=function() {
-        
+    var total=function(tab) {
+        switch (tab) {
+            case 'paper_photo':
+                var paperCost = getPaperCost();
+                var matCost = getMatCost();
+                var frameCost = getFrameCost();
+                var total = paperCost+matCost+frameCost;
+                return total;
+            break;
+            case 'canvas_photo':
+                var paperCost = getPaperCost();
+                var matCost = getMatCost();
+                var frameCost = getFrameCost();
+                var total = paperCost+matCost+frameCost;
+                return total;
+            break;
+            case 'canvas_min_photo':
+                var paperCost = getPaperCost();
+                var matCost = getMatCost();
+                var frameCost = getFrameCost();
+                var total = paperCost+matCost+frameCost;
+                return total;
+            break;
+            case 'canvas_min_photo':
+                var paperCost = getPaperCost();
+                var matCost = getMatCost();
+                var frameCost = getFrameCost();
+                var total = paperCost+matCost+frameCost;
+                return total;
+            break;
+              
+            default:
+                return _varibales.height * _varibales.width * _categoryCost;
+            break;
+        }
     }
 
     var setTab = function(tab, scope, val) {
@@ -53,14 +86,13 @@ function printPriceService() {
         setImageMatHeightWidthClass('',scope);
         setMatHeightWidth(0,0);
         // reCalculate(scope);
-        resetCosts(scope);
+        // resetCosts(scope);
 
         scope._tab = scope._tabPanel = _tab = tab.id;
-        scope.variables = tab.variables;
-        console.log(tab.variables);
-        // setVaribales(tab.variables,scope);
-        setPaperCost(tab.price);
 
+        scope.variables = _varibales =  tab.variables;
+        _varibales._categoryCost = tab.price; 
+        
         var category = _tabCategory = tab.category;
         _process = [];
         _process.variables = tab.variables; 
@@ -106,27 +138,49 @@ function printPriceService() {
         scope.variables = variables;
     }
     var setGlobalValues = function (category,subcategory,categories,scope) {
+        scope.pins == false;
+
         if (category == "paper_type" && subcategory == "information") {
+            _varibales._paperTypeCost = categories.price;
             setPaperTypeCost(categories.price);   
         }
+        
+        if (category == "canvas_type" && subcategory == "information") {
+            _varibales._canvasTypeCost = categories.price;
+            setCanvasTypeCost(categories.price);   
+        }
+
         if (category == "print_size" && subcategory == "information") {
-             setHeightWidth(categories.height,categories.width);   
+            _varibales._height = categories.height
+            _varibales._width = categories.width
+            setHeightWidth(categories.height,categories.width);   
         }
         if (category == "frame" && subcategory != "none") {
+             _varibales._frameCost = categories.price;
              setFrameCost(categories.price); 
              setImageFrameClass(categories.class,scope); 
         }
         
         if (category == "wrap" && subcategory != "none") {
-             setWrapCost(categories.price); 
-             setImageFrameClass(categories.class,scope); 
+            _varibales._wrap = categories.price;
+            setImageFrameClass(categories.class,scope); 
+        }
+
+        if (category == "hanging" && subcategory != "none") {
+             _varibales._hanging = categories.price;
+             scope.pins == true;
+            if(categories.id == "4_pins"){
+                scope.pins == true;
+            }
         }
 
         if (category == "mat" && (subcategory == "color" || subcategory == "archivable" || subcategory == "regular" )) {
+            _varibales._matCost = categories.price;
             setImageMatColorClass(categories.class,scope);   
         }
-
-        reCalculate(scope);
+        
+        scope.total = 0;
+        // reCalculate(scope);
 
 
     }
@@ -216,6 +270,9 @@ function printPriceService() {
 
         if (_category == 'mat') {
             setMatHeightWidth(subcategories.height,subcategories.width)
+            _varibales._mat_height = subcategories.height
+            _varibales._mat_width = subcategories.width
+
             setImageMatHeightWidthClass(_subcategories,scope);  
             reCalculate(scope);
         }

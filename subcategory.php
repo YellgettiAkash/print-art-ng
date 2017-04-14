@@ -1,5 +1,6 @@
 <?php
 
+
 $photo_photo_steps = [
   ["id" => "paper_type", "name" => "Paper Type ", "active" => true, "subcategory" => [
     ["id" => "information", "name" => "information", "active" => true, "categories" => [

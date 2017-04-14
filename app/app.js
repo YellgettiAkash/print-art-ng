@@ -4,7 +4,7 @@ app.service('printPriceService',printPriceService);
 
 app.controller('home', function($scope, $http,printPriceService) {
 
-	//initialing the product price
+    //initialing the product price
 	var product_cost = 100;
     
     // initialing value in service

@@ -456,6 +456,35 @@ border-image-repeat: round !important;
     
 }
 
+
+#pins-on div {
+  min-width: 20px;
+  min-height: 20px;
+  background: rgb(228, 228, 228);
+  border: 1px solid rgb(150, 150, 150);
+  border-radius: 20px;
+  box-shadow: 2px 2px 0px rgb(169, 169, 169);
+  z-index: 9999;
+  display: block;
+  position: absolute;
+}
+.pin_n1 {
+  top: 5%;
+  left: 10%;
+}
+.pin_n2 {
+  top: 5%;
+  right: 10%;
+}
+.pin_n3 {
+  bottom: 10%;
+  left: 10%;
+}
+.pin_n4 {
+  bottom: 10%;
+  right: 10%;
+}
+
 /*======Color Frame ===================*/
 
 .black{

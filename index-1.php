@@ -19,12 +19,29 @@
             <div class="col-sm-4">
                <div class="panel panel-default">
                   <div class="panel-body">
-                     <img src="assets/images/sample.jpg" class="img-responsive {{ imageFrameClass }} {{ imageMatColorClass }} {{ imageMatHeightWidthClass }}">
+                     <div>
+                        <img src="assets/images/sample.jpg" class="img-responsive {{ imageFrameClass }} {{ imageMatColorClass }} {{ imageMatHeightWidthClass }}">   
+                     </div>
+                     <div id="pins-on" ng-if="pins">
+                        <div class="pin_n1"></div>
+                        <div class="pin_n2"></div>
+                        <div class="pin_n3"></div>
+                        <div class="pin_n4"></div>
+                     </div>                     
+                  
                   </div>
                </div>
             </div>
             <div class="col-sm-8">
-               
+               <div class="col-sm-12">
+                  <div class="panel panel-default">
+                     <div class="panel-body">
+                        <button class="btn btn-primary"> Product Cost : {{ productCost }}</button>
+                        <button class="btn btn-primary"> Picture Cost : {{ pictureCost }}</button>
+                        <button class="btn btn-primary"> Total : {{ total }}</button>
+                     </div>
+                  </div>
+               </div>
                <div class="col-sm-12">
                   <div class="panel panel-default">
                      <div class="panel-body">
