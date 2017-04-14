@@ -135,7 +135,7 @@
                                                 </div>
                                              </div>
                                              <div ng-if="_categoryPanel != 'frame' && _categoryPanel != 'mat' && _subcategoryPanel != 'frame'">
-                                                <button class="btn btn-space"
+                                                <button class="btn btn-space {{ categories.class }}"
                                                    ng-repeat="categories in subcategory.categories"
                                                    ng-click="selectedCategories(categories)" 
                                                    ng-class="{'btn-primary' : categories.id == _categories,'btn-default' : categories.id != _categories }">

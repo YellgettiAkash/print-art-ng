@@ -82,18 +82,18 @@ $photo_photo_steps = [
   ],
     ],
     ["id" => "regular", "name" => "Regular", "categories" => [
-      ['id' => 'black', 'class' => 'black_mat', 'name' => 'black', 'price' => 10, ],
-      ['id' => 'blue', 'class' => 'blue_mat', 'name' => 'blue', 'price' => 15, ],
-      ['id' => 'dark_brown', 'class' => 'dark_brown_mat', 'name' => 'dark_brown', 'price' => 10, ],
-      ['id' => 'gold', 'class' => 'gold_mat', 'name' => 'frame3', 'gold' => 10, ],
-      ['id' => 'green', 'class' => 'green_mat', 'name' => 'green', 'price' => 10, ],
-      ['id' => 'grey', 'class' => 'grey_mat', 'name' => 'grey', 'price' => 15, ],
-      ['id' => 'honey_brown', 'class' => 'honey_brown_mat', 'name' => 'honey_brown', 'price' => 10, ],
-      ['id' => 'ivory', 'class' => 'ivory_mat', 'name' => 'ivory', 'price' => 10, ],
-      ['id' => 'purple', 'class' => 'purple_mat', 'name' => 'purple', 'price' => 10, ],
-      ['id' => 'red', 'class' => 'red_mat', 'name' => 'red', 'price' => 15, ],
-      ['id' => 'silver', 'class' => 'silver_mat', 'name' => 'silver', 'price' => 10, ],
-      ['id' => 'white', 'class' => 'white_mat', 'name' => 'white', 'price' => 10, ]
+      ['id' => 'black', 'class' => 'black_mat', 'name' => 'Black', 'price' => 10, ],
+      ['id' => 'blue', 'class' => 'blue_mat', 'name' => 'Blue', 'price' => 15, ],
+      ['id' => 'dark_brown', 'class' => 'dark_brown_mat', 'name' => 'Dark Brown', 'price' => 10, ],
+      ['id' => 'gold', 'class' => 'gold_mat', 'name' => 'Gold', 'gold' => 10, ],
+      ['id' => 'green', 'class' => 'green_mat', 'name' => 'Green', 'price' => 10, ],
+      ['id' => 'grey', 'class' => 'grey_mat', 'name' => 'Grey', 'price' => 15, ],
+      ['id' => 'honey_brown', 'class' => 'honey_brown_mat', 'name' => 'Honey Brown', 'price' => 10, ],
+      ['id' => 'ivory', 'class' => 'ivory_mat', 'name' => 'Ivory', 'price' => 10, ],
+      ['id' => 'purple', 'class' => 'purple_mat', 'name' => 'Purple', 'price' => 10, ],
+      ['id' => 'red', 'class' => 'red_mat', 'name' => 'Red', 'price' => 15, ],
+      ['id' => 'silver', 'class' => 'silver_mat', 'name' => 'Silver', 'price' => 10, ],
+      ['id' => 'white', 'class' => 'white_mat', 'name' => 'White', 'price' => 10, ]
     ],
      "subcategories" => [
     ['name' => '1"x1"', 'id' => 'mat_1_1', 'height' => 1, 'width' => 1, 'price' => 2, ],
@@ -201,18 +201,18 @@ $acrylic_photo = [
 $mdf_photo_steps = [
   ["id" => "mdf_color", "name" => "MDF Colors", "subcategory" => [
     ["id" => "information", "name" => "information", "categories" => [
-       ['id' => 'black', 'class' => 'black_frame', 'name' => 'black', 'price' => 10, ],
-      ['id' => 'blue', 'class' => 'blue_frame', 'name' => 'blue', 'price' => 15, ],
-      ['id' => 'dark_brown', 'class' => 'dark_brown_frame', 'name' => 'dark_brown', 'price' => 10, ],
-      ['id' => 'gold', 'class' => 'gold_frame', 'name' => 'frame3', 'gold' => 10, ],
-      ['id' => 'green', 'class' => 'green_frame', 'name' => 'green', 'price' => 10, ],
-      ['id' => 'grey', 'class' => 'grey_frame', 'name' => 'grey', 'price' => 15, ],
-      ['id' => 'honey_brown', 'class' => 'honey_brown_frame', 'name' => 'honey_brown', 'price' => 10, ],
-      ['id' => 'ivory', 'class' => 'ivory_frame', 'name' => 'ivory', 'price' => 10, ],
-      ['id' => 'purple', 'class' => 'purple_frame', 'name' => 'purple', 'price' => 10, ],
-      ['id' => 'red', 'class' => 'red_frame', 'name' => 'red', 'price' => 15, ],
-      ['id' => 'silver', 'class' => 'silver_frame', 'name' => 'silver', 'price' => 10, ],
-      ['id' => 'white', 'class' => 'white_frame', 'name' => 'white', 'price' => 10, ]
+      ['id' => 'black', 'class' => 'black_mat', 'name' => 'Black', 'price' => 10, ],
+      ['id' => 'blue', 'class' => 'blue_mat', 'name' => 'Blue', 'price' => 15, ],
+      ['id' => 'dark_brown', 'class' => 'dark_brown_mat', 'name' => 'Dark Brown', 'price' => 10, ],
+      ['id' => 'gold', 'class' => 'gold_mat', 'name' => 'Gold', 'gold' => 10, ],
+      ['id' => 'green', 'class' => 'green_mat', 'name' => 'Green', 'price' => 10, ],
+      ['id' => 'grey', 'class' => 'grey_mat', 'name' => 'Grey', 'price' => 15, ],
+      ['id' => 'honey_brown', 'class' => 'honey_brown_mat', 'name' => 'Honey Brown', 'price' => 10, ],
+      ['id' => 'ivory', 'class' => 'ivory_mat', 'name' => 'Ivory', 'price' => 10, ],
+      ['id' => 'purple', 'class' => 'purple_mat', 'name' => 'Purple', 'price' => 10, ],
+      ['id' => 'red', 'class' => 'red_mat', 'name' => 'Red', 'price' => 15, ],
+      ['id' => 'silver', 'class' => 'silver_mat', 'name' => 'Silver', 'price' => 10, ],
+      ['id' => 'white', 'class' => 'white_mat', 'name' => 'White', 'price' => 10, ]
 
     ]]
   ], ],
@@ -252,8 +252,8 @@ $acrylic_block_photo = [
   ], ],
   ["id" => "print_size", "name" => "Print Size", "subcategory" => [
     ["id" => "information", "name" => "information", "categories" => [
-      ['name' => '4.3" X 6.7" X 0.8"', 'id' => '4.3-6.7-0.8', 'height' => 5, 'width' => 3.7, 'price' => 0, ],
-      ['name' => '6.7" X 9.1" X 1.0"', 'id' => '6.7-9.1-1.0', 'height' => 5, 'width' => 3.7, 'price' => 0, ],
+      ['name' => '4.3" X 6.7" X 0.8"', 'id' => '4.3-6.7-0.8', 'height' => 4.3, 'width' => 6.7, 'price' => 0, ],
+      ['name' => '6.7" X 9.1" X 1.0"', 'id' => '6.7-9.1-1.0', 'height' => 6.7, 'width' => 9.1, 'price' => 0, ],
      
     ]],
   ], ],

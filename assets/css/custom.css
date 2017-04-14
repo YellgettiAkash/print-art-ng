@@ -494,6 +494,7 @@ border-image-repeat: round !important;
 	border:15px solid black;
 }
 .black_mat{
+	color: #fff;
 	background-color: black;	
 }
 .blue{
@@ -503,6 +504,7 @@ border-image-repeat: round !important;
 	border:15px solid blue;
 }
 .blue_mat{
+	color: #fff;
 	background-color: blue;	
 }
 .dark_brown{
@@ -512,6 +514,7 @@ border-image-repeat: round !important;
 	border:15px solid #4C2B00;
 }
 .dark_brown_mat{
+	color: #fff;
 	background-color:#4C2B00;	
 }
 .gold{
@@ -521,6 +524,7 @@ border-image-repeat: round !important;
 	border:15px solid gold;
 }
 .gold_mat{
+	color: #fff;
 	background-color: gold;	
 }
 /*=================*/
@@ -531,6 +535,7 @@ border-image-repeat: round !important;
 	border:15px solid green;
 }
 .green_mat{
+	color: #fff;
 	background-color: green;	
 }
 .grey{
@@ -540,6 +545,7 @@ border-image-repeat: round !important;
 	border:15px solid grey;
 }
 .grey_mat{
+	color: #fff;
 	background-color: grey;	
 }
 .honey_brown{
@@ -549,6 +555,7 @@ border-image-repeat: round !important;
 	border:15px solid #FBA32F;
 }
 .honey_brown_mat{
+	color: #fff;
 	background:#FBA32F;	
 }
 .ivory{
@@ -558,6 +565,7 @@ border-image-repeat: round !important;
 	border:15px solid ivory;
 }
 .ivory_mat{
+	color: #fff;
 	background-color:ivory;	
 }
 /*=================*/
@@ -568,6 +576,7 @@ border-image-repeat: round !important;
 	border:15px solid purple;
 }
 .purple_mat{
+	color: #fff;
 	background-color:purple;	
 }
 .red{
@@ -577,6 +586,7 @@ border-image-repeat: round !important;
 	border:15px solid red;
 }
 .red_mat{
+	color: #fff;
 	background-color:red;	
 }
 .silver{
@@ -586,9 +596,11 @@ border-image-repeat: round !important;
 	border:15px solid silver;
 }
 .silver_mat{
+	color: #fff;
 	background-color:silver;	
 }
 .white{
+	color: #000;
 	background-color:white;
 }
 /*================Mat Padding============ */

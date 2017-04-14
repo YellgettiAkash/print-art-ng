@@ -10,6 +10,7 @@ function printPriceService() {
 
     var _productPrice = 0;
 
+    var _categoryCalCost = 0;
     var _categoryCost = 0;
     var _paperCost = 0;
     var _frameCost = 0;
@@ -27,7 +28,7 @@ function printPriceService() {
     var _tabCategory = [];
     var _process = [];
 
-    var _varibales = "";
+    var _variables = "";
     var _key = "";
     var _tab = "";
     var _category = "";
@@ -47,22 +48,38 @@ function printPriceService() {
     var total=function(tab) {
         switch (tab) {
             case 'paper_photo':
-                var paperCost = getPaperTypeCost();
+                var paperCost = _height * _width * getPaperTypeCost();
                 var matCost = getMatCost();
                 var frameCost = getFrameCost();
                 var total = paperCost+matCost+frameCost;
-                return total;
+                return twoDecimal(total);
             break;
             case 'canvas_photo':
-                var canvasTypeCost = getCanvasTypeCost();
+                var canvasTypeCost =  _height * _width * getCanvasTypeCost();
                 var wrap = getWrapCost();
                 var frameCost = getFrameCost();
                 var total = canvasTypeCost+wrap+frameCost;
-                return total;
+                return twoDecimal(total);
+            break;
+            case 'canvas_min_photo':
+                var categoryCalCost = getCategoryCalCost();
+                var total = categoryCalCost;
+                return twoDecimal(total);
+            break;
+            case 'acrylic_photo':
+                var categoryCalCost = getCategoryCalCost();
+                var hanging = getHangingCost();
+                var total = categoryCalCost+hanging;
+                return twoDecimal(total);
+            break;
+            case 'acrylic_block_photo':
+                var total = _variables._height * _variables._width * _variables._categoryCost;
+                return twoDecimal(total);
             break;
               
             default:
-                return _varibales._height * _varibales._width * _varibales._categoryCost;
+                var total = _variables._height * _variables._width * _variables._categoryCost;
+                return twoDecimal(total);
             break;
         }
     }
@@ -78,8 +95,8 @@ function printPriceService() {
 
         scope._tab = scope._tabPanel = _tab = tab.id;
 
-        scope.variables = _varibales =  tab.variables;
-        _varibales._categoryCost = tab.price; 
+        scope.variables = _variables =  tab.variables;
+        _variables._categoryCost = tab.price; 
         
         var category = _tabCategory = tab.category;
         _process = [];
@@ -129,42 +146,43 @@ function printPriceService() {
         scope.pins == false;
 
         if (category == "paper_type" && subcategory == "information") {
-            _varibales._paperTypeCost = categories.price;
+            _variables._paperTypeCost = categories.price;
             setPaperTypeCost(categories.price);   
         }
         
         if (category == "canvas_type" && subcategory == "information") {
-            _varibales._canvasTypeCost = categories.price;
+            _variables._canvasTypeCost = categories.price;
             setCanvasTypeCost(categories.price);   
         }
 
         if (category == "print_size" && subcategory == "information") {
-            _varibales._height = categories.height
-            _varibales._width = categories.width
+            _variables._height = categories.height
+            _variables._width = categories.width
             setHeightWidth(categories.height,categories.width);   
         }
         if (category == "frame" && subcategory != "none") {
-             _varibales._frameCost = categories.price;
+             _variables._frameCost = categories.price;
              setFrameCost(categories.price); 
              setImageFrameClass(categories.class,scope); 
         }
         
         if (category == "wrap" && subcategory != "none") {
-            _varibales._wrap = categories.price;
+            _variables._wrap = categories.price;
             setWrapCost(categories.price);   
             setImageFrameClass(categories.class,scope); 
         }
 
         if (category == "hanging" && subcategory != "none") {
-             _varibales._hanging = categories.price;
-             scope.pins == true;
+             _variables._hanging = categories.price;
+            setHangingCost(categories.price);  
+            scope.pins == true;
             if(categories.id == "4_pins"){
                 scope.pins == true;
             }
         }
 
         if (category == "mat" && (subcategory == "color" || subcategory == "archivable" || subcategory == "regular" )) {
-            _varibales._matCost = categories.price;
+            _variables._matCost = categories.price;
             setImageMatColorClass(categories.class,scope);   
         }
         scope.productCost = _productCost;
@@ -260,8 +278,8 @@ function printPriceService() {
 
         if (_category == 'mat') {
             setMatHeightWidth(subcategories.height,subcategories.width)
-            _varibales._mat_height = subcategories.height
-            _varibales._mat_width = subcategories.width
+            _variables._mat_height = subcategories.height
+            _variables._mat_width = subcategories.width
 
             setImageMatHeightWidthClass(_subcategories,scope);  
             scope.productCost = _productCost;
@@ -347,12 +365,12 @@ function printPriceService() {
     }
 
     
-    var setCategoryCalCost = function(paperTypeCost) {
-        _paperTypeCost = paperTypeCost;
+    var setCategoryCalCost = function() {
+        _categoryCalCost = _variables._height * _variables._width * categoryCost;
     }
 
-    var getPaperTypeCost = function() {
-        return _paperTypeCost;
+    var getCategoryCalCost = function() {
+        return _categoryCalCost = _variables._height * _variables._width * _variables._categoryCost;
     }
     
     var setPaperTypeCost = function(paperTypeCost) {
