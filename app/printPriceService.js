@@ -15,8 +15,9 @@ function printPriceService() {
     var _frameCost = 0;
     var _matCost = 0;
     var _paperTypeCost = 0;
-    var _canvasTypeCost =0;
-    var _wrapCost =0;
+    var _canvasTypeCost = 0;
+    var _wrapCost = 0;
+    var _hanging = 0;
 
     var _frameFrontAndBack = 0.2;
     var _frameCostHeight = 0.5;
@@ -345,6 +346,15 @@ function printPriceService() {
         _paperCost = paperCost;
     }
 
+    
+    var setCategoryCalCost = function(paperTypeCost) {
+        _paperTypeCost = paperTypeCost;
+    }
+
+    var getPaperTypeCost = function() {
+        return _paperTypeCost;
+    }
+    
     var setPaperTypeCost = function(paperTypeCost) {
         _paperTypeCost = paperTypeCost;
     }
@@ -352,6 +362,10 @@ function printPriceService() {
     var getPaperTypeCost = function() {
         return _paperTypeCost;
     }
+
+
+
+
 
     var setCanvasTypeCost = function(canvasTypeCost) {
         _canvasTypeCost = canvasTypeCost;
@@ -361,6 +375,9 @@ function printPriceService() {
         return _canvasTypeCost;
     }
 
+
+
+
     var setWrapCost = function(wrapCost) {
         _wrapCost = wrapCost;
     }
@@ -368,6 +385,20 @@ function printPriceService() {
     var getWrapCost = function() {
         return _wrapCost;
     }
+
+
+
+    var setHangingCost = function(hanging) {
+        _hanging = hanging;
+    }
+
+    var getHangingCost = function() {
+        return _hanging;
+    }
+
+
+
+
 
     var getPictureCost = function() {
         return 0.10 * _productCost;
