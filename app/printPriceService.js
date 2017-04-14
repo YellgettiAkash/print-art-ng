@@ -25,6 +25,7 @@ function printPriceService() {
     var _tabCategory = [];
     var _process = [];
 
+    var _varibales = "";
     var _key = "";
     var _tab = "";
     var _category = "";
@@ -55,7 +56,9 @@ function printPriceService() {
         resetCosts(scope);
 
         scope._tab = scope._tabPanel = _tab = tab.id;
-        // console.log(tab);
+        scope.variables = tab.variables;
+        console.log(tab.variables);
+        // setVaribales(tab.variables,scope);
         setPaperCost(tab.price);
 
         var category = _tabCategory = tab.category;
@@ -99,7 +102,9 @@ function printPriceService() {
         var id = 0;
         setCategory(id, category[id], scope);
     }
-
+    var setVaribales = function (variables,scope) {
+        scope.variables = variables;
+    }
     var setGlobalValues = function (category,subcategory,categories,scope) {
         if (category == "paper_type" && subcategory == "information") {
             setPaperTypeCost(categories.price);   

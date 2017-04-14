@@ -6,12 +6,12 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="assets/css/bootstrap.min.css">
       <link rel="stylesheet" href="assets/css/custom.css">
-      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="assets/css/style.css">
       <script src="assets/js/jquery.min.js"></script>
       <script src="assets/js/bootstrap.min.js"></script>
-      <script src="assets/angular-js/angular.min.js"></script>
-      <script src="printPriceService.js"></script>
-      <script src="app.js"></script>
+      <script src="app/angular.min.js"></script>
+      <script src="app/printPriceService.js"></script>
+      <script src="app/app.js"></script>
    </head>
    <body ng-app="myApp" ng-controller="home">
       <div class="container container-margin">
@@ -30,6 +30,7 @@
                      <div class="panel-body">
                         <!-- Tabs Start Header -->
                         <div >
+                         <p> {{ variables }}</p>
                            <button class="btn btn-space "
                               ng-repeat="tab in tabs" 
                               ng-click="selectedTab(tab)"

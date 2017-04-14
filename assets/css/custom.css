@@ -1,5 +1,5 @@
 .frame_style_1 {
-border: 1.8em double #edb742 !important; 
+border: 1.7em double #edb742 !important; 
 /* Safari and Chrome */
 -webkit-border-image-source: url(../images/frames/full-frame-max1.png) !important; 
 -webkit-border-image-slice: 56 !important;  
@@ -38,7 +38,7 @@ border-image-repeat: round !important;
     
 }
 .frame_style_2 {
-border: 1.8em double #edb742 !important; 
+border: 1.7em double #edb742 !important; 
 /* Safari and Chrome */
 -webkit-border-image-source: url(../images/frames/full-frame-max2.png) !important; 
 -webkit-border-image-slice: 56 !important;  
@@ -116,7 +116,7 @@ border-image-repeat: round !important;
 }
 
 .frame_style_4 {
-border: 1.3em double #edb742 !important; 
+border: 1.1em double #edb742 !important; 
 /* Safari and Chrome */
 -webkit-border-image-source: url(../images/frames/full-frame-max4.png) !important; 
 -webkit-border-image-slice: 56 !important;  
@@ -268,7 +268,7 @@ border-image-repeat: round !important;
 }
 
 .frame_style_8 {
-border: 1.8em double #edb742 !important; 
+border: 1.7em double #edb742 !important; 
 /* Safari and Chrome */
 -webkit-border-image-source: url(../images/frames/full-frame-max8.png) !important; 
 -webkit-border-image-slice: 56 !important;  
@@ -417,7 +417,7 @@ border-image-repeat: round !important;
 }
 
 .frame_style_12 {
-border: 1.8em double #edb742 !important; 
+border: 1.7em double #edb742 !important; 
 /* Safari and Chrome */
 -webkit-border-image-source: url(../images/frames/full-frame-max12.png) !important; 
 -webkit-border-image-slice: 56 !important;  
