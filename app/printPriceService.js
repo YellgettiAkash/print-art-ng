@@ -10,6 +10,7 @@ function printPriceService() {
 
     var _productPrice = 0;
 
+    var _categoryCost = 0;
     var _paperCost = 0;
     var _frameCost = 0;
     var _matCost = 0;
@@ -45,36 +46,22 @@ function printPriceService() {
     var total=function(tab) {
         switch (tab) {
             case 'paper_photo':
-                var paperCost = getPaperCost();
+                var paperCost = getPaperTypeCost();
                 var matCost = getMatCost();
                 var frameCost = getFrameCost();
                 var total = paperCost+matCost+frameCost;
                 return total;
             break;
             case 'canvas_photo':
-                var paperCost = getPaperCost();
-                var matCost = getMatCost();
+                var canvasTypeCost = getCanvasTypeCost();
+                var wrap = getWrapCost();
                 var frameCost = getFrameCost();
-                var total = paperCost+matCost+frameCost;
-                return total;
-            break;
-            case 'canvas_min_photo':
-                var paperCost = getPaperCost();
-                var matCost = getMatCost();
-                var frameCost = getFrameCost();
-                var total = paperCost+matCost+frameCost;
-                return total;
-            break;
-            case 'canvas_min_photo':
-                var paperCost = getPaperCost();
-                var matCost = getMatCost();
-                var frameCost = getFrameCost();
-                var total = paperCost+matCost+frameCost;
+                var total = canvasTypeCost+wrap+frameCost;
                 return total;
             break;
               
             default:
-                return _varibales.height * _varibales.width * _categoryCost;
+                return _varibales._height * _varibales._width * _varibales._categoryCost;
             break;
         }
     }
@@ -163,6 +150,7 @@ function printPriceService() {
         
         if (category == "wrap" && subcategory != "none") {
             _varibales._wrap = categories.price;
+            setWrapCost(categories.price);   
             setImageFrameClass(categories.class,scope); 
         }
 
@@ -178,8 +166,9 @@ function printPriceService() {
             _varibales._matCost = categories.price;
             setImageMatColorClass(categories.class,scope);   
         }
-        
-        scope.total = 0;
+        scope.productCost = _productCost;
+        scope.total = total(_tab);
+
         // reCalculate(scope);
 
 
@@ -274,7 +263,8 @@ function printPriceService() {
             _varibales._mat_width = subcategories.width
 
             setImageMatHeightWidthClass(_subcategories,scope);  
-            reCalculate(scope);
+            scope.productCost = _productCost;
+            scope.total = total(_tab);
         }
         
         

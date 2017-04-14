@@ -2,7 +2,7 @@
 include('subcategory.php');
 
 $types_of_print = [
-	"photo_photo" => [
+	"paper_photo" => [
 		"id" => "paper_photo",
 		"name" => "Paper Photo",
 		"price" => 2,

@@ -6,10 +6,10 @@ app.controller('home', function($scope, $http,printPriceService) {
 
     //initialing the product price
 	var product_cost = 100;
-    
+    $scope.total = 0;
     // initialing value in service
     printPriceService.setProductCost(product_cost);
-    
+    $scope.productCost = printPriceService.getProductCost();
     // getting picture cost from service according to the product cost set 
     $scope.pictureCost = printPriceService.getPictureCost();
     
