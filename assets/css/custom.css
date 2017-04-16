@@ -455,7 +455,20 @@ border-image-repeat: round !important;
     
     
 }
-
+.canvas_mini_photo {
+    background-image: url(../images/mini_canvas.png) !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 350px;
+    padding-left: 80px;
+    padding-top: 44px;
+    background-size: contain;
+    position: relative;
+}
+.canvas_mini_photo img{
+	max-height:200px !important;
+    width:auto !important;
+}
 
 #pins-on div {
   min-width: 20px;

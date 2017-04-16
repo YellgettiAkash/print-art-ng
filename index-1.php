@@ -19,8 +19,8 @@
             <div class="col-sm-4">
                <div class="panel panel-default">
                   <div class="panel-body">
-                     <div>
-                        <img src="assets/images/sample.jpg" class="img-responsive {{ imageFrameClass }} {{ imageMatColorClass }} {{ imageMatHeightWidthClass }}">   
+                     <div  class="{{ _tab }}" >
+                        <img src="assets/images/sample.jpg" class="img-responsive  {{ imageFrameClass }} {{ imageMatColorClass }} {{ imageMatHeightWidthClass }}">   
                      </div>
                      <div id="pins-on" ng-if="pins">
                         <div class="pin_n1"></div>
@@ -47,7 +47,7 @@
                      <div class="panel-body">
                         <!-- Tabs Start Header -->
                         <div >
-                         <p> {{ variables }}</p>
+
                            <button class="btn btn-space "
                               ng-repeat="tab in tabs" 
                               ng-click="selectedTab(tab)"

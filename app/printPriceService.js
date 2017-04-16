@@ -173,11 +173,12 @@ function printPriceService() {
         }
 
         if (category == "hanging" && subcategory != "none") {
-             _variables._hanging = categories.price;
+            _variables._hanging = categories.price;
             setHangingCost(categories.price);  
-            scope.pins == true;
             if(categories.id == "4_pins"){
-                scope.pins == true;
+                scope.pins = _variables._4pins = true;
+            }else{
+                scope.pins = _variables._4pins = false;
             }
         }
 
@@ -265,7 +266,7 @@ function printPriceService() {
         if (_process[_key]._categories != _categories) {
             _process[_key]._categories = _categories;
         };
-        console.log(_process);
+        // console.log(_process);
         setGlobalValues(_category,_subcategory,categories,scope);
     }
 

@@ -7,6 +7,7 @@ app.controller('home', function($scope, $http,printPriceService) {
     //initialing the product price
 	var product_cost = 100;
     $scope.total = 0;
+    $scope.pins = false;
     // initialing value in service
     printPriceService.setProductCost(product_cost);
     $scope.productCost = printPriceService.getProductCost();

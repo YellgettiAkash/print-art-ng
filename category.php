@@ -52,8 +52,8 @@ $types_of_print = [
 
 		"category" => $canvas_photo
 	],
-	"canvas_min_photo" => [
-		"id" => "canvas_min_photo",
+	"canvas_mini_photo" => [
+		"id" => "canvas_mini_photo",
 		"name" => "Canvas Mini ",
 		"price" => 5,
 		"variables" => [
@@ -84,6 +84,7 @@ $types_of_print = [
 		"variables" => [
 			"_categoryCost" => 0,
 			"_hanging" => 0,
+			"_4pins" => false,
 			"_height" => 0,
 			"_width" => 0,
 		],
