@@ -573,6 +573,7 @@ border-image-repeat: round !important;
 }
 .ivory{
 	background-color:ivory;
+	border: 1px solid black;
 }
 .ivory_frame{
 	border:15px solid ivory;
@@ -613,8 +614,15 @@ border-image-repeat: round !important;
 	background-color:silver;	
 }
 .white{
-	color: #000;
 	background-color:white;
+	border: 1px solid black;
+}
+.white_frame{
+	border:15px solid white;
+}
+.white_mat{
+	color:#000;
+	background-color:white;	
 }
 /*================Mat Padding============ */
 
