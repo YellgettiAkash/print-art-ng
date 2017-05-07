@@ -20,7 +20,7 @@
                <div class="panel panel-default">
                   <div class="panel-body">
                      <div  class="{{ _tab }}" >
-                        <img src="assets/images/sample.jpg" class="img-responsive  {{ imageFrameClass }} {{ imageMatColorClass }} {{ imageMatHeightWidthClass }}">   
+                        <img src="assets/images/sample.jpg" class="img-responsive img-size {{ imageFrameClass }} {{ imageMatColorClass }} {{ imageMatHeightWidthClass }}">   
                      </div>
                      <div id="pins-on" ng-if="pins">
                         <div class="pin_n1"></div>

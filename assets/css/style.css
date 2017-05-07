@@ -12,16 +12,35 @@
   background-color: #ff5e25;
   border-color: #ff5e25;
 }
-.img-frame-size{
-    height: 100px;
-    width: 100px;
-    margin-right: 10px;
-    margin-top: 10px;
-    display: inline-block;
-}
+
 .imageColorFrameClass{
     border: 5px solid #000;
 }
+
+@media only screen and (min-width: 380px) {
+  .img-frame-size{
+    height: 70px;
+    width: 68px;
+    margin-right: 10px;
+    margin-top: 10px;
+    display: inline-block;
+  }
+  .img-size{
+    height: 40%;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width:1440px){
+  .img-frame-size{
+      height: 100px;
+      width: 100px;
+      margin-right: 10px;
+      margin-top: 10px;
+      display: inline-block;
+  }
+}
+
 
 hr {
   margin: 0px;
@@ -31,15 +50,7 @@ hr {
 .borders{
     border :5px solid #ff5e25;
 }
-.grey{
-  background: #eee;
-}
-.red{
-  background: red;
-}
-.blue{
-  background: blue;
-}
+
 
 .btn-primary{
   color: #fff;
