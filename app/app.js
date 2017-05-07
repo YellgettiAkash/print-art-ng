@@ -59,5 +59,15 @@ app.controller('home', function($scope, $http,printPriceService) {
         printPriceService.getPrevious($scope);
     }
 
+    $scope.totals = function(){
+        var tab = printPriceService.getTab();
+        console.log(tab)
+        var total = printPriceService.getTotal(tab);
+        console.log(total)
+        var selection = printPriceService.getSelections();
+        console.log(selection)
+        alert(total);
+    }
+
 
 });

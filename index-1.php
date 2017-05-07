@@ -39,6 +39,7 @@
                         <button class="btn btn-primary"> Product Cost : {{ productCost }}</button>
                         <button class="btn btn-primary"> Picture Cost : {{ pictureCost }}</button>
                         <button class="btn btn-primary"> Total : {{ total }}</button>
+                        <button class="btn btn-primary" ng-click="totals()"> Get ToTal</button>
                      </div>
                   </div>
                </div>

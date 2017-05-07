@@ -84,6 +84,14 @@ function printPriceService() {
         }
     }
 
+    var getSelections =function () {
+        return _process;
+    }
+
+    var getTab = function() {
+        return _tab;
+    }
+
     var setTab = function(tab, scope, val) {
         
         setImageFrameClass('',scope);
@@ -446,11 +454,15 @@ function printPriceService() {
         getTabs: getTabs,
         resetCosts: resetCosts,
 
+        getTotal : total ,
+        getSelections : getSelections ,
 
         getNext: getNext,
         getPrevious: getPrevious,
 
         setTab: setTab,
+        getTab: getTab,
+
         setCategory: setCategory,
         setSubCategory: setSubCategory,
         setCategories: setCategories,
